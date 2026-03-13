@@ -10,7 +10,11 @@ const routes: Routes = [
   {
     path: 'inicio',
     loadChildren: () => import('./paginas/inicio/inicio.module').then( m => m.InicioPageModule)
+  },  {
+    path: 'semaforo',
+    loadChildren: () => import('./paginas/semaforo/semaforo.module').then( m => m.SemaforoPageModule)
   },
+
 ];
 
 @NgModule({
