@@ -1,0 +1,15 @@
+ion-content {
+    --background: #ffffff;
+    --background: linear-gradient(180deg, rgba(255, 255, 255, 1) 12%, rgba(80, 139, 67, 1) 100%, rgba(196, 242, 174, 1) 44%);
+}
+.boton-semaforo{
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding: 0 20px;
+    margin-top: 20px;
+    flex-direction: row;
+    gap: 10px;
+
+}
