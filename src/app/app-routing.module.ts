@@ -12,8 +12,8 @@ const routes: Routes = [
     loadChildren: () => import('./paginas/inicio/inicio.module').then(m => m.InicioPageModule)
   },
   {
-    path: 'semaforo',
-    loadChildren: () => import('./paginas/recomendaciones/semaforo.module').then(m => m.SemaforoPageModule)
+    path: 'recomendaciones',
+    loadChildren: () => import('./paginas/recomendaciones/recomendaciones.module').then(m => m.SemaforoPageModule)
   },
 
 ];
