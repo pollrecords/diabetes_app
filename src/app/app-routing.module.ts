@@ -15,6 +15,10 @@ const routes: Routes = [
     path: 'semaforo',
     loadChildren: () => import('./paginas/recomendaciones/semaforo.module').then(m => m.SemaforoPageModule)
   },
+  {
+    path: 'info',
+    loadChildren: () => import('./paginas/info/info.module').then( m => m.InfoPageModule)
+  },
 
 ];
 
