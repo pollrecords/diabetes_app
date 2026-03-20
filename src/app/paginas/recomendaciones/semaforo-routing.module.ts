@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
-import { SemaforoPage } from './semaforo.page';
+import { SemaforoPage } from './recomendaciones';
 
 const routes: Routes = [
   {
@@ -14,4 +14,4 @@ const routes: Routes = [
   imports: [RouterModule.forChild(routes)],
   exports: [RouterModule],
 })
-export class SemaforoPageRoutingModule {}
+export class SemaforoPageRoutingModule { }

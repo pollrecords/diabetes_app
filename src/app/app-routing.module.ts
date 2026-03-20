@@ -12,12 +12,12 @@ const routes: Routes = [
     loadChildren: () => import('./paginas/inicio/inicio.module').then(m => m.InicioPageModule)
   },
   {
-    path: 'semaforo',
+    path: 'recomendaciones',
     loadChildren: () => import('./paginas/recomendaciones/semaforo.module').then(m => m.SemaforoPageModule)
   },
   {
     path: 'info',
-    loadChildren: () => import('./paginas/info/info.module').then( m => m.InfoPageModule)
+    loadChildren: () => import('./paginas/info/info.module').then(m => m.InfoPageModule)
   },
 
 ];
