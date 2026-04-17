@@ -6,7 +6,7 @@ import { IonicModule } from '@ionic/angular';
 
 import { SemaforoPageRoutingModule } from './semaforo-routing.module';
 
-import { SemaforoPage } from './recomendaciones';
+import { SemaforoPage } from './semaforo.page';
 
 @NgModule({
   imports: [
