@@ -19,6 +19,31 @@ const routes: Routes = [
     path: 'info',
     loadChildren: () => import('./paginas/info/info.module').then(m => m.InfoPageModule)
   },
+  {
+    path: 'manzana',
+    loadChildren: () => import('./paginas/manzana/manzana.module').then(m => m.ManzanaPageModule)
+  },
+  {
+    path: 'naranja',
+    loadChildren: () => import('./paginas/naranja/naranja.module').then(m => m.NaranjaPageModule)
+  },
+  {
+    path: 'fresa',
+    loadChildren: () => import('./paginas/fresa/fresa.module').then(m => m.FresaPageModule)
+  },
+  {
+    path: 'pera',
+    loadChildren: () => import('./paginas/pera/pera.module').then(m => m.PeraPageModule)
+  },
+  {
+    path: 'sandia',
+    loadChildren: () => import('./paginas/sandia/sandia.module').then(m => m.SandiaPageModule)
+  },
+  {
+    path: 'mango',
+    loadChildren: () => import('./paginas/mango/mango.module').then(m => m.MangoPageModule)
+  },
+
 
 ];
 
