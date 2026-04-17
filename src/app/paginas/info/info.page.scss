@@ -1,0 +1,37 @@
+ion-header {
+    --background: transparent;
+}
+
+.boton-atras {
+    --color: #508b43;
+    --padding-start: 0;
+    --padding-end: 0;
+    display: inline-block;
+    padding: 10px 20px;
+}
+
+ion-content {
+    --background: #ffffff;
+    --background: linear-gradient(180deg, rgba(255, 255, 255, 1) 12%, rgba(80, 139, 67, 1) 100%, rgba(196, 242, 174, 1) 44%);
+}
+
+.titulo {
+    position: center;
+    display: center;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    size: 150px;
+    padding: 0 20px;
+    margin-top: 20px;
+    color: #595D5C;
+}
+
+
+ion-button {
+    --background: #595D5C;
+    border-radius: 15%;
+    height: 55px;
+    font-size: 18px;
+    color: #ffffff;
+}

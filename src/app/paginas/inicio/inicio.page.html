@@ -1,12 +1,15 @@
-<ion-content [fullscreen]="true">
-  <div class="boton-inicio">
-    <ion-button expand="block" routerLink="/recomendaciones">
-      Entrar a recomendaciones
-    </ion-button>
+<ion-content>
+  <ion-back-button routerLink="/recomendaciones" class="boton-atras"></ion-back-button>
 
-    <ion-button expand="block" routerLink="/info">
-      Informate
-    </ion-button>
+  <ion-content [fullscreen]="true">
+    <div class="boton-inicio">
+      <ion-button expand="block" routerLink="/recomendaciones">
+        Entrar a recomendaciones
+      </ion-button>
 
-  </div>
-</ion-content>
+      <ion-button expand="block" routerLink="/info">
+        Informate
+      </ion-button>
+
+    </div>
+  </ion-content>
