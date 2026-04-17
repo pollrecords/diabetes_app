@@ -1,14 +1,65 @@
 <ion-header [translucent]="true">
-
 </ion-header>
 
 <ion-content>
+  <ion-back-button routerLink="/recomendaciones" class="boton-atras"></ion-back-button>
+
   <div class="boton-verdura">
     <ion-grid>
       <ion-row>
-        <ion-col><ion-button expand="block" color="transparent" routerLink="/recomendaciones">FRUTA</ion-button></ion-col>
+        <ion-col><ion-button expand="block" color="transparent"
+            routerLink="/recomendaciones">FRUTA</ion-button></ion-col>
         <ion-col><ion-button expand="block" color="transparent" routerLink="/verdura">VERDURA</ion-button></ion-col>
-        <ion-col><ion-button expand="block" color="transparent" routerLink="/leguminosas">LEGUMINOSAS</ion-button></ion-col>
+        <ion-col><ion-button expand="block" color="transparent"
+            routerLink="/leguminosas">LEGUMINOSAS</ion-button></ion-col>
+      </ion-row>
+    </ion-grid>
+  </div>
+
+  <div class="container">
+    <ion-grid>
+      <ion-row>
+        <ion-col size="4">
+          <ion-card class="card" color="sucess">
+            <ion-card-content>
+
+              <img src="/assets/brocoli.png">
+
+              <ion-button color="light" expand="block" fill="clear" routerLink="/brocoli">
+                Brócoli
+              </ion-button>
+            </ion-card-content>
+          </ion-card>
+        </ion-col>
+        <ion-col size="4">
+          <ion-card class="card" color="sucess">
+            <ion-card-content>
+              <img src="/assets/calabaza.png">
+              <ion-button color="light" expand="block" fill="clear" routerLink="/calabaza">Calabaza</ion-button>
+            </ion-card-content>
+          </ion-card>
+        </ion-col>
+        <ion-col size="4">
+          <ion-card class="card" color="sucess">
+            <ion-card-content>
+              <img src="/assets/coliflor.png">
+              <ion-button color="light" expand="block" fill="clear" routerLink="/coliflor">Coliflor</ion-button>
+            </ion-card-content>
+          </ion-card>
+        </ion-col>
+      </ion-row>
+
+      <ion-row>
+        <ion-col size="4">
+          <ion-card class="card" color="sucess">
+            <ion-card-content>
+
+              <img src="/assets/apio.png">
+
+              <ion-button color="dark" expand="block" fill="clear" routerLink="/apio">Apio</ion-button>
+            </ion-card-content>
+          </ion-card>
+        </ion-col>
       </ion-row>
     </ion-grid>
   </div>
