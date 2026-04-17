@@ -50,7 +50,24 @@ const routes: Routes = [
   {
     path: 'leguminosas',
     loadChildren: () => import('./paginas/leguminosas/leguminosas.module').then(m => m.LeguminosasPageModule)
+  },  {
+    path: 'frijol',
+    loadChildren: () => import('./paginas/frijol/frijol.module').then( m => m.FrijolPageModule)
   },
+  {
+    path: 'lenteja',
+    loadChildren: () => import('./paginas/lenteja/lenteja.module').then( m => m.LentejaPageModule)
+  },
+  {
+    path: 'arroz',
+    loadChildren: () => import('./paginas/arroz/arroz.module').then( m => m.ArrozPageModule)
+  },
+  {
+    path: 'cacahuate',
+    loadChildren: () => import('./paginas/cacahuate/cacahuate.module').then( m => m.CacahuatePageModule)
+  },
+
+
 
   
 ];
