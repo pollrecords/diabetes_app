@@ -1,0 +1,63 @@
+ion-header {
+    --background: transparent;
+}
+
+.boton-atras {
+    --color: #508b43;
+    --padding-start: 0;
+    --padding-end: 0;
+    display: inline-block;
+    padding: 10px 20px;
+}
+
+ion-content {
+    --background: #ffffff;
+    --background: linear-gradient(180deg, rgba(255, 255, 255, 1) 12%, rgba(80, 139, 67, 1) 100%, rgba(196, 242, 174, 1) 44%);
+}
+
+.contenedor-imagen {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    padding: 20px;
+}
+
+.contenedor-texto {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    padding: 20px;
+}
+
+.imagen-fruta {
+    font-size: 120px;
+    color: #508b43;
+    margin-top: 20px;
+}
+
+.tarjeta-texto {
+    width: 100%;
+    max-width: 500px;
+    box-shadow: 12px 4px 8px 0 rgb(127, 155, 129);
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+.tarjeta-texto ion-card-content {
+    background-color: #ffffff;
+    width: 100%;
+    padding: 15px;
+}
+
+.titulo-descripcion {
+    font-weight: 600;
+    margin-bottom: 10px;
+    color: #5f1717;
+}
+
+.lista-informacion {
+    padding-left: 20px;
+    color: #5f1717;
+}
