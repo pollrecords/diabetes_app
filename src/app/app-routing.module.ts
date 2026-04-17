@@ -43,6 +43,14 @@ const routes: Routes = [
     path: 'mango',
     loadChildren: () => import('./paginas/mango/mango.module').then(m => m.MangoPageModule)
   },
+  {
+    path: 'verdura',
+    loadChildren: () => import('./paginas/verdura/verdura.module').then(m => m.VerduraPageModule)
+  },
+  {
+    path: 'leguminosas',
+    loadChildren: () => import('./paginas/leguminosas/leguminosas.module').then(m => m.LeguminosasPageModule)
+  },
 
   
 ];
