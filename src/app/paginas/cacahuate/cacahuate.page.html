@@ -1,13 +1,20 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>cacahuate</ion-title>
-  </ion-toolbar>
-</ion-header>
+<ion-content>
+    <ion-back-button routerLink="/recomendaciones" class="boton-atras"></ion-back-button>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">cacahuate</ion-title>
-    </ion-toolbar>
-  </ion-header>
+    <div class="contenedor-imagen">
+        <img class="imagen-leguminosa" src="/assets/cacahuate.png" alt="Cacahuate">
+    </div>
+
+    <div class="contenedor-texto">
+        <ion-card class="tarjeta-texto">
+            <ion-card-content>
+                <div class="titulo-descripcion">Información de cacahuate:</div>
+                <ion-list class="lista-informacion">
+                    <ion-item>Dato Uno</ion-item>
+                    <ion-item>Dato Dos</ion-item>
+                    <ion-item>Dato Tres</ion-item>
+                </ion-list>
+            </ion-card-content>
+        </ion-card>
+    </div>
 </ion-content>
