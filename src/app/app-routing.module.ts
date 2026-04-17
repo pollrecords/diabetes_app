@@ -44,7 +44,7 @@ const routes: Routes = [
     loadChildren: () => import('./paginas/mango/mango.module').then(m => m.MangoPageModule)
   },
 
-
+  
 ];
 
 @NgModule({
