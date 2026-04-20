@@ -1,1 +1,1 @@
-An app for a project where we help a specifi issue for diabetic users. Currentl in the planning / early build / mockup stages. 
+An app for a project where we help a specific issues for diabetic users. Currently building it using REACT and IONIC framework. 
