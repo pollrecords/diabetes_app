@@ -1,20 +1,22 @@
 <ion-content>
   <ion-back-button routerLink="/recomendaciones" class="boton-atras"></ion-back-button>
 
-  <img src="/assets/frijol.png" class="imagen">
   <ion-content [fullscreen]="true">
-    <div class="boton-inicio">
-      <ion-button expand="block" routerLink="/recomendaciones">
-        Entrar a recomendaciones
-      </ion-button>
+    <div class="contenedor-inicio">
+      <img src="/assets/logo.png" class="imagen">
 
-      <ion-button expand="block" routerLink="/info">
-        Informate
-      </ion-button>
+      <div class="boton-inicio">
+        <ion-button expand="block" routerLink="/recomendaciones" color="light">
+          Entrar a recomendaciones
+        </ion-button>
 
-      <ion-button expand="block" routerLink="/dashboard">
-        Recetas!
-      </ion-button>
+        <ion-button expand="block" routerLink="/info" color="light">
+          Informate
+        </ion-button>
 
+        <ion-button expand="block" routerLink="/dashboard" color="light">
+          Recetas!
+        </ion-button>
+      </div>
     </div>
   </ion-content>

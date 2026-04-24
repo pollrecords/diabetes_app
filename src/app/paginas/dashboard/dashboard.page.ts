@@ -2,17 +2,6 @@ import { Component, OnInit } from '@angular/core';
 import { addDoc, collection, getDocs, limit, orderBy, query, serverTimestamp } from 'firebase/firestore';
 import { db } from '../../firebase-config';
 
-interface RecipeData {
-  name: string;
-  description: string;
-  prepTime: number;
-  cookTime: number;
-  servings: number;
-  ingredients: Array<{ ingrediente: string; cantidad: string }>;
-  instructions: string[];
-  authorId?: string;
-}
-
 interface RecipePreview {
   id: string;
   name: string;
@@ -58,7 +47,7 @@ export class DashboardPage implements OnInit {
       return;
     }
 
-    const recipeData: RecipeData = {
+    const recipeData: any = {
       name,
       description,
       prepTime: Number(this.prepTime) || 0,
@@ -87,7 +76,7 @@ export class DashboardPage implements OnInit {
       const q = query(collection(db, 'recipes'), orderBy('createdAt', 'desc'), limit(5));
       const snapshot = await getDocs(q);
       this.recentRecipes = snapshot.docs.map(doc => {
-        const data = doc.data() as Partial<RecipeData>;
+        const data = doc.data() as any;
         return {
           id: doc.id,
           name: data.name || 'Sin nombre',
@@ -135,45 +124,12 @@ export class DashboardPage implements OnInit {
     this.instructionsText = '';
   }
 
-  async addRecipe(recipeData: RecipeData) {
+  async addRecipe(recipeData: any) {
     const docRef = await addDoc(collection(db, 'recipes'), {
       ...recipeData,
       createdAt: serverTimestamp()
     });
     return docRef.id;
-  }
-
-  async addSampleRecipe() {
-    const newRecipe: RecipeData = {
-      name: 'Spicy Chickpea Curry',
-      description: 'A hearty and flavorful vegan curry.',
-      prepTime: 15,
-      cookTime: 40,
-      servings: 6,
-      ingredients: [
-        { ingrediente: 'Garbanzos', cantidad: '2 latas (escurridos)' },
-        { ingrediente: 'Leche de coco', cantidad: '1 lata (400ml)' },
-        { ingrediente: 'Cebolla', cantidad: '1 grande, picada' },
-        { ingrediente: 'Ajo', cantidad: '3 dientes, picados' },
-        { ingrediente: 'Jengibre', cantidad: '1 pulgada, rallado' },
-        { ingrediente: 'Curry en polvo', cantidad: '2 cucharadas' },
-        { ingrediente: 'Espinaca', cantidad: '200g' }
-      ],
-      instructions: [
-        'Saute onion, garlic, and ginger until fragrant.',
-        'Add curry powder and cook for 1 minute.',
-        'Stir in chickpeas and coconut milk, bring to a simmer.',
-        'Cook for 20 minutes, then add spinach and cook until wilted.'
-      ]
-    };
-
-    try {
-      const id = await this.addRecipe(newRecipe);
-      this.message = `Receta agregada con ID: ${id}`;
-      await this.loadRecentRecipes();
-    } catch {
-      this.message = 'No se pudo agregar la receta.';
-    }
   }
 
 }

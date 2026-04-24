@@ -3,32 +3,23 @@ ion-content {
     --background: linear-gradient(180deg, rgba(255, 255, 255, 1) 13%, rgba(154, 219, 118, 1) 100%, rgba(196, 242, 174, 1) 72%);
 }
 
-.boton-inicio {
-    position: absolute;
-    bottom: 60px;
-    left: 11.5%;
-    width: 80%;
-    padding: 0 20px;
+.contenedor-inicio {
     display: flex;
     flex-direction: column;
-    gap: 60px;
-
-}
-
-ion-button {
-    --background: #595D5C;
-    border-radius: 15%;
-    height: 55px;
-    font-size: 18px;
-    color: #ffffff;
+    align-items: center;
+    padding: 40px 20px 20px;
+    gap: 40px;
 }
 
 .imagen {
-    position: relative;
-    justify-content: relative;
-    align-items: relative;
-    flex-direction: row;
-    width: 100px;
-    height: 100px;
+    width: 150px;
+    height: 150px;
     border-radius: 50%;
+}
+
+.boton-inicio {
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
 }
