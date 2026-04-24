@@ -1,8 +1,9 @@
 ion-content {
     --background: #ffffff;
-    --background:  linear-gradient(180deg,rgba(255, 255, 255, 1) 13%, rgba(154, 219, 118, 1) 100%, rgba(196, 242, 174, 1) 72%);
+    --background: linear-gradient(180deg, rgba(255, 255, 255, 1) 13%, rgba(154, 219, 118, 1) 100%, rgba(196, 242, 174, 1) 72%);
 }
-.boton-inicio{
+
+.boton-inicio {
     position: absolute;
     bottom: 60px;
     left: 11.5%;
@@ -18,6 +19,16 @@ ion-button {
     --background: #595D5C;
     border-radius: 15%;
     height: 55px;
-    font-size:18px;
+    font-size: 18px;
     color: #ffffff;
+}
+
+.imagen {
+    position: relative;
+    justify-content: relative;
+    align-items: relative;
+    flex-direction: row;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
 }

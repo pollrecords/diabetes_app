@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { addDoc, collection, serverTimestamp } from 'firebase/firestore';
+import { addDoc, collection, getDocs, limit, orderBy, query, serverTimestamp } from 'firebase/firestore';
 import { db } from '../../firebase-config';
 
 interface RecipeData {
@@ -11,6 +11,17 @@ interface RecipeData {
   ingredients: Array<{ ingrediente: string; cantidad: string }>;
   instructions: string[];
   authorId?: string;
+}
+
+interface RecipePreview {
+  id: string;
+  name: string;
+  description: string;
+  prepTime: number;
+  cookTime: number;
+  servings: number;
+  ingredients: Array<{ ingrediente: string; cantidad: string }>;
+  instructions: string[];
 }
 
 @Component({
@@ -29,10 +40,13 @@ export class DashboardPage implements OnInit {
   servings: number | null = null;
   ingredientsText = '';
   instructionsText = '';
+  recentRecipes: RecipePreview[] = [];
+  expandedId: string | null = null;
 
   constructor() { }
 
   ngOnInit() {
+    this.loadRecentRecipes();
   }
 
   async submitRecipe() {
@@ -58,8 +72,35 @@ export class DashboardPage implements OnInit {
       const id = await this.addRecipe(recipeData);
       this.message = `Receta guardada con ID: ${id}`;
       this.clearForm();
+      await this.loadRecentRecipes();
     } catch {
       this.message = 'No se pudo guardar la receta.';
+    }
+  }
+
+  toggleRecipe(id: string) {
+    this.expandedId = this.expandedId === id ? null : id;
+  }
+
+  async loadRecentRecipes() {
+    try {
+      const q = query(collection(db, 'recipes'), orderBy('createdAt', 'desc'), limit(5));
+      const snapshot = await getDocs(q);
+      this.recentRecipes = snapshot.docs.map(doc => {
+        const data = doc.data() as Partial<RecipeData>;
+        return {
+          id: doc.id,
+          name: data.name || 'Sin nombre',
+          description: data.description || 'Sin descripcion',
+          prepTime: data.prepTime || 0,
+          cookTime: data.cookTime || 0,
+          servings: data.servings || 0,
+          ingredients: data.ingredients || [],
+          instructions: data.instructions || []
+        };
+      });
+    } catch {
+      this.recentRecipes = [];
     }
   }
 
@@ -95,15 +136,11 @@ export class DashboardPage implements OnInit {
   }
 
   async addRecipe(recipeData: RecipeData) {
-    try {
-      const docRef = await addDoc(collection(db, 'recipes'), {
-        ...recipeData,
-        createdAt: serverTimestamp()
-      });
-      return docRef.id;
-    } catch (e) {
-      throw e;
-    }
+    const docRef = await addDoc(collection(db, 'recipes'), {
+      ...recipeData,
+      createdAt: serverTimestamp()
+    });
+    return docRef.id;
   }
 
   async addSampleRecipe() {
@@ -133,6 +170,7 @@ export class DashboardPage implements OnInit {
     try {
       const id = await this.addRecipe(newRecipe);
       this.message = `Receta agregada con ID: ${id}`;
+      await this.loadRecentRecipes();
     } catch {
       this.message = 'No se pudo agregar la receta.';
     }
