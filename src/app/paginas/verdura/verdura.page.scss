@@ -3,22 +3,6 @@ ion-content {
     --background: linear-gradient(180deg, rgba(255, 255, 255, 1) 12%, rgba(80, 139, 67, 1) 100%, rgba(196, 242, 174, 1) 44%);
 }
 
-ion-col {
-    padding: 4px;
-    /* Reduces the "air" between cards */
-}
-
-.boton-verdura {
-    position: relative;
-    justify-content: relative;
-    align-items: relative;
-    width: 100%;
-    padding: 0 20px;
-    margin-top: 20px;
-    flex-direction: row;
-    gap: 10px;
-}
-
 .boton-atras {
     --color: #508b43;
     --padding-start: 0;
@@ -27,7 +11,7 @@ ion-col {
     padding: 10px 20px;
 }
 
-.boton-semaforo {
+.boton-leguminosas {
     position: relative;
     justify-content: relative;
     align-items: relative;
