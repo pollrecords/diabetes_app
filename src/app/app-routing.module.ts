@@ -86,6 +86,22 @@ const routes: Routes = [
     path: 'coliflor',
     loadChildren: () => import('./paginas/coliflor/coliflor.module').then( m => m.ColiflorPageModule)
   },
+  {
+    path: 'chicharo',
+    loadChildren: () => import('./paginas/chicharo/chicharo.module').then( m => m.ChicharoPageModule)
+  },
+  {
+    path: 'garbanzo',
+    loadChildren: () => import('./paginas/garbanzo/garbanzo.module').then( m => m.GarbanzoPageModule)
+  },
+  {
+    path: 'betabel',
+    loadChildren: () => import('./paginas/betabel/betabel.module').then( m => m.BetabelPageModule)
+  },
+  {
+    path: 'berenjena',
+    loadChildren: () => import('./paginas/berenjena/berenjena.module').then( m => m.BerenjenaPageModule)
+  },
 
 
 
