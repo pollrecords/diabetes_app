@@ -70,7 +70,23 @@ const routes: Routes = [
   {
     path: 'cacahuate',
     loadChildren: () => import('./paginas/cacahuate/cacahuate.module').then(m => m.CacahuatePageModule)
+  },  {
+    path: 'apio',
+    loadChildren: () => import('./paginas/apio/apio.module').then( m => m.ApioPageModule)
   },
+  {
+    path: 'brocoli',
+    loadChildren: () => import('./paginas/brocoli/brocoli.module').then( m => m.BrocoliPageModule)
+  },
+  {
+    path: 'calabaza',
+    loadChildren: () => import('./paginas/calabaza/calabaza.module').then( m => m.CalabazaPageModule)
+  },
+  {
+    path: 'coliflor',
+    loadChildren: () => import('./paginas/coliflor/coliflor.module').then( m => m.ColiflorPageModule)
+  },
+
 
 
 
