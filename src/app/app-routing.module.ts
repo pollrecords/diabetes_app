@@ -21,7 +21,7 @@ const routes: Routes = [
   },
   {
     path: 'manzana',
-    loadChildren: () => import('./paginas/manzana/manzana.module').then(m => m.ManzanaPageModule)
+    loadChildren: () => import('./paginas/categorias/frutas/manzana/manzana.module').then(m => m.ManzanaPageModule)
   },
   {
     path: 'dashboard',
@@ -29,23 +29,23 @@ const routes: Routes = [
   },
   {
     path: 'naranja',
-    loadChildren: () => import('./paginas/naranja/naranja.module').then(m => m.NaranjaPageModule)
+    loadChildren: () => import('./paginas/categorias/frutas/naranja/naranja.module').then(m => m.NaranjaPageModule)
   },
   {
     path: 'fresa',
-    loadChildren: () => import('./paginas/fresa/fresa.module').then(m => m.FresaPageModule)
+    loadChildren: () => import('./paginas/categorias/frutas/fresa/fresa.module').then(m => m.FresaPageModule)
   },
   {
     path: 'pera',
-    loadChildren: () => import('./paginas/pera/pera.module').then(m => m.PeraPageModule)
+    loadChildren: () => import('./paginas/categorias/frutas/pera/pera.module').then(m => m.PeraPageModule)
   },
   {
     path: 'sandia',
-    loadChildren: () => import('./paginas/sandia/sandia.module').then(m => m.SandiaPageModule)
+    loadChildren: () => import('./paginas/categorias/frutas/sandia/sandia.module').then(m => m.SandiaPageModule)
   },
   {
     path: 'mango',
-    loadChildren: () => import('./paginas/mango/mango.module').then(m => m.MangoPageModule)
+    loadChildren: () => import('./paginas/categorias/frutas/mango/mango.module').then(m => m.MangoPageModule)
   },
   {
     path: 'verdura',
@@ -57,51 +57,52 @@ const routes: Routes = [
   },
   {
     path: 'frijol',
-    loadChildren: () => import('./paginas/frijol/frijol.module').then(m => m.FrijolPageModule)
+    loadChildren: () => import('./paginas/categorias/leguminosa/frijol/frijol.module').then(m => m.FrijolPageModule)
   },
   {
     path: 'lenteja',
-    loadChildren: () => import('./paginas/lenteja/lenteja.module').then(m => m.LentejaPageModule)
+    loadChildren: () => import('./paginas/categorias/leguminosa/lenteja/lenteja.module').then(m => m.LentejaPageModule)
   },
   {
     path: 'arroz',
-    loadChildren: () => import('./paginas/arroz/arroz.module').then(m => m.ArrozPageModule)
+    loadChildren: () => import('./paginas/categorias/leguminosa/arroz/arroz.module').then(m => m.ArrozPageModule)
   },
   {
     path: 'cacahuate',
-    loadChildren: () => import('./paginas/cacahuate/cacahuate.module').then(m => m.CacahuatePageModule)
-  },  {
+    loadChildren: () => import('./paginas/categorias/leguminosa/cacahuate/cacahuate.module').then(m => m.CacahuatePageModule)
+  },
+  {
     path: 'apio',
-    loadChildren: () => import('./paginas/apio/apio.module').then( m => m.ApioPageModule)
+    loadChildren: () => import('./paginas/categorias/verduras/apio/apio.module').then( m => m.ApioPageModule)
   },
   {
     path: 'brocoli',
-    loadChildren: () => import('./paginas/brocoli/brocoli.module').then( m => m.BrocoliPageModule)
+    loadChildren: () => import('./paginas/categorias/verduras/brocoli/brocoli.module').then( m => m.BrocoliPageModule)
   },
   {
     path: 'calabaza',
-    loadChildren: () => import('./paginas/calabaza/calabaza.module').then( m => m.CalabazaPageModule)
+    loadChildren: () => import('./paginas/categorias/verduras/calabaza/calabaza.module').then( m => m.CalabazaPageModule)
   },
   {
     path: 'coliflor',
-    loadChildren: () => import('./paginas/coliflor/coliflor.module').then( m => m.ColiflorPageModule)
+    loadChildren: () => import('./paginas/categorias/verduras/coliflor/coliflor.module').then( m => m.ColiflorPageModule)
   },
   {
     path: 'chicharo',
-    loadChildren: () => import('./paginas/chicharo/chicharo.module').then( m => m.ChicharoPageModule)
+    loadChildren: () => import('./paginas/categorias/leguminosa/chicharo/chicharo.module').then( m => m.ChicharoPageModule)
   },
   {
     path: 'garbanzo',
-    loadChildren: () => import('./paginas/garbanzo/garbanzo.module').then( m => m.GarbanzoPageModule)
+    loadChildren: () => import('./paginas/categorias/leguminosa/garbanzo/garbanzo.module').then( m => m.GarbanzoPageModule)
   },
   {
     path: 'betabel',
-    loadChildren: () => import('./paginas/betabel/betabel.module').then( m => m.BetabelPageModule)
+    loadChildren: () => import('./paginas/categorias/verduras/betabel/betabel.module').then( m => m.BetabelPageModule)
   },
   {
     path: 'berenjena',
-    loadChildren: () => import('./paginas/berenjena/berenjena.module').then( m => m.BerenjenaPageModule)
-  },
+    loadChildren: () => import('./paginas/categorias/verduras/berenjena/berenjena.module').then( m => m.BerenjenaPageModule)
+  }
 
 
 
