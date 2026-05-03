@@ -16,16 +16,24 @@ const routes: Routes = [
     loadChildren: () => import('./paginas/recomendaciones/semaforo.module').then(m => m.SemaforoPageModule)
   },
   {
+    path: 'verdura',
+    loadChildren: () => import('./paginas/verdura/verdura.module').then(m => m.VerduraPageModule)
+  },
+  {
+    path: 'leguminosas',
+    loadChildren: () => import('./paginas/leguminosas/leguminosas.module').then(m => m.LeguminosasPageModule)
+  },
+  {
     path: 'info',
     loadChildren: () => import('./paginas/info/info.module').then(m => m.InfoPageModule)
   },
   {
-    path: 'manzana',
-    loadChildren: () => import('./paginas/categorias/frutas/manzana/manzana.module').then(m => m.ManzanaPageModule)
-  },
-  {
     path: 'dashboard',
     loadChildren: () => import('./paginas/dashboard/dashboard.module').then(m => m.DashboardPageModule)
+  },
+  {
+    path: 'manzana',
+    loadChildren: () => import('./paginas/categorias/frutas/manzana/manzana.module').then(m => m.ManzanaPageModule)
   },
   {
     path: 'naranja',
@@ -46,14 +54,6 @@ const routes: Routes = [
   {
     path: 'mango',
     loadChildren: () => import('./paginas/categorias/frutas/mango/mango.module').then(m => m.MangoPageModule)
-  },
-  {
-    path: 'verdura',
-    loadChildren: () => import('./paginas/verdura/verdura.module').then(m => m.VerduraPageModule)
-  },
-  {
-    path: 'leguminosas',
-    loadChildren: () => import('./paginas/leguminosas/leguminosas.module').then(m => m.LeguminosasPageModule)
   },
   {
     path: 'frijol',
