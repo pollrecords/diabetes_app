@@ -97,8 +97,9 @@ const routes: Routes = [
   },
   {
     path: 'menu',
-    loadChildren: () => import('./paginas/menu/menu.module').then( m => m.MenuPageModule)
-  },  {
+    loadChildren: () => import('./paginas/menu/menu.module').then(m => m.MenuPageModule)
+  },
+  {
     path: 'actividad-fisica',
     loadChildren: () => import('./paginas/actividad-fisica/actividad-fisica.module').then( m => m.ActividadFisicaPageModule)
   }
