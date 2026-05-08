@@ -4,7 +4,7 @@ ion-content {
 }
 
 .boton-atras {
-    --color: #508b43;
+    --color: #ffffff;
     --padding-start: 0;
     --padding-end: 0;
     display: inline-block;
@@ -41,7 +41,7 @@ ion-content {
     padding: 0 0px;
     margin-top: 20px;
     flex-direction: row;
-    box-shadow: 12px 4px 8px 0 rgb(127, 155, 129);
+    box-shadow: 12px 4px 8px 0 rgba(178, 178, 178, 0.283);
     transition: 0.3s;
     border-radius: 10px;
     margin: relative;
