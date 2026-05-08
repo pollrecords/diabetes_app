@@ -55,9 +55,12 @@
 
   <p class="titulo-descripcion">Recetas registradas:</p>
 
-  <p *ngIf="recentRecipes.length === 0" class="mensaje-vacio">Aun no hay recetas registradas.</p>
+  <ion-searchbar [(ngModel)]="searchQuery" placeholder="Buscar receta..." debounce="200"></ion-searchbar>
 
-  <ion-card class="tarjeta-texto" color="sucess" *ngFor="let recipe of recentRecipes" (click)="toggleRecipe(recipe.id)">
+  <p *ngIf="filteredRecipes.length === 0" class="mensaje-vacio">Aun no hay recetas registradas.</p>
+
+  <ion-card class="tarjeta-texto" color="sucess" *ngFor="let recipe of filteredRecipes"
+    (click)="toggleRecipe(recipe.id)">
     <ion-card-content>
       <b>{{ recipe.name }}</b>
       <p>{{ recipe.description }}</p>
@@ -72,7 +75,7 @@
         <p *ngFor="let step of recipe.instructions; let i = index">{{ i + 1 }}. {{ step }}</p>
       </div>
 
-      <p class="toque-expandir">{{ expandedId === recipe.id ? 'cerrar' : 'ver más' }}</p>
+      <p class="toque-expandir" color="light">{{ expandedId === recipe.id ? 'cerrar' : 'ver más' }}</p>
     </ion-card-content>
   </ion-card>
 
