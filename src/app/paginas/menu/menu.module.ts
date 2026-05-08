@@ -4,17 +4,17 @@ import { FormsModule } from '@angular/forms';
 
 import { IonicModule } from '@ionic/angular';
 
-import { VerduraPageRoutingModule } from './verdura-routing.module';
+import { MenuPageRoutingModule } from './menu-routing.module';
 
-import { VerduraPage } from './verdura.page';
+import { MenuPage } from './menu.page';
 
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
     IonicModule,
-    VerduraPageRoutingModule
+    MenuPageRoutingModule
   ],
-  declarations: [VerduraPage]
+  declarations: [MenuPage]
 })
-export class VerduraPageModule {}
+export class MenuPageModule {}

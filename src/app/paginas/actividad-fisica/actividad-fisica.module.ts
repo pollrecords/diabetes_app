@@ -4,17 +4,17 @@ import { FormsModule } from '@angular/forms';
 
 import { IonicModule } from '@ionic/angular';
 
-import { LeguminosasPageRoutingModule } from './leguminosas-routing.module';
+import { ActividadFisicaPageRoutingModule } from './actividad-fisica-routing.module';
 
-import { LeguminosasPage } from './leguminosas.page';
+import { ActividadFisicaPage } from './actividad-fisica.page';
 
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
     IonicModule,
-    LeguminosasPageRoutingModule
+    ActividadFisicaPageRoutingModule
   ],
-  declarations: [LeguminosasPage]
+  declarations: [ActividadFisicaPage]
 })
-export class LeguminosasPageModule {}
+export class ActividadFisicaPageModule {}
