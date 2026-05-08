@@ -16,14 +16,6 @@ const routes: Routes = [
     loadChildren: () => import('./paginas/recomendaciones/semaforo.module').then(m => m.SemaforoPageModule)
   },
   {
-    path: 'verdura',
-    loadChildren: () => import('./paginas/verdura/verdura.module').then(m => m.VerduraPageModule)
-  },
-  {
-    path: 'leguminosas',
-    loadChildren: () => import('./paginas/leguminosas/leguminosas.module').then(m => m.LeguminosasPageModule)
-  },
-  {
     path: 'info',
     loadChildren: () => import('./paginas/info/info.module').then(m => m.InfoPageModule)
   },
@@ -102,7 +94,16 @@ const routes: Routes = [
   {
     path: 'berenjena',
     loadChildren: () => import('./paginas/categorias/verduras/berenjena/berenjena.module').then( m => m.BerenjenaPageModule)
+  },
+  {
+    path: 'menu',
+    loadChildren: () => import('./paginas/menu/menu.module').then( m => m.MenuPageModule)
+  },  {
+    path: 'actividad-fisica',
+    loadChildren: () => import('./paginas/actividad-fisica/actividad-fisica.module').then( m => m.ActividadFisicaPageModule)
   }
+
+
 
 
 

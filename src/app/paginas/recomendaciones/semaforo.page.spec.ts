@@ -1,5 +1,5 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-import { SemaforoPage } from './recomendaciones';
+import { SemaforoPage } from './semaforo.page';
 
 describe('SemaforoPage', () => {
   let component: SemaforoPage;

@@ -1,17 +1,21 @@
 ion-content {
     --background: #ffffff;
-    --background: linear-gradient(180deg, rgba(255, 255, 255, 1) 12%, rgba(80, 139, 67, 1) 100%, rgba(196, 242, 174, 1) 44%);
+    --background: linear-gradient(180deg, #52a4c5 0%, rgba(80, 139, 67, 1) 90%);
+}
+
+ion-col {
+    padding: 4px;
 }
 
 .boton-atras {
-    --color: #508b43;
+    --color: #ffffff;
     --padding-start: 0;
     --padding-end: 0;
     display: inline-block;
     padding: 10px 20px;
 }
 
-.boton-leguminosas {
+.boton-semaforo {
     position: relative;
     justify-content: relative;
     align-items: relative;
@@ -36,7 +40,7 @@ ion-content {
     padding: 5px;
     position: relative;
     justify-content: relative;
-    align-items: relative;
+    align-items: center;
     width: 85%;
     padding: 0 0px;
     margin-top: 20px;
