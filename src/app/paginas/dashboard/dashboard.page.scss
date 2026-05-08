@@ -1,5 +1,5 @@
 .boton-atras {
-    --color: #508b43;
+    --color: #ffffff;
     --padding-start: 0;
     --padding-end: 0;
     display: inline-block;
@@ -12,7 +12,7 @@
 
 ion-content {
     --background: #ffffff;
-    --background: linear-gradient(180deg, rgba(255, 255, 255, 1) 12%, rgba(80, 139, 67, 1) 100%, rgba(196, 242, 174, 1) 44%);
+    --background: linear-gradient(180deg, #52a4c5 0%, rgba(80, 139, 67, 1) 90%);
 }
 
 .titulo-descripcion {
@@ -33,7 +33,8 @@ ion-content {
 }
 
 .tarjeta-texto {
-    box-shadow: 12px 4px 8px 0 rgb(127, 155, 129);
+    color: #000000;
+    box-shadow: 12px 4px 8px 0 rgba(178, 178, 178, 0.283);
     border-radius: 10px;
     margin-bottom: 10px;
     cursor: pointer;

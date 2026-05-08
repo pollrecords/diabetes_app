@@ -2,7 +2,7 @@ ion-content {
 
     --padding-bottom: 30px;
     --background: #ffffff;
-    --background: linear-gradient(180deg, rgba(255, 255, 255, 1) 12%, rgba(80, 139, 67, 1) 100%, rgba(196, 242, 174, 1) 44%);
+    --background: linear-gradient(180deg, #52a4c5 0%, rgba(80, 139, 67, 1) 90%);
 }
 
 ion-col {
@@ -11,12 +11,13 @@ ion-col {
 }
 
 .boton-atras {
-    --color: #508b43;
+    --color: #ffffff;
     --padding-start: 0;
     --padding-end: 0;
     display: inline-block;
     padding: 10px 20px;
 }
+
 .separador {
     margin-top: 32px;
 }
@@ -24,10 +25,11 @@ ion-col {
 .titulo {
     font-size: 24px;
     font-weight: bold;
-    color: #508b43;
+    color: #ffffff;
     text-align: center;
     margin-top: 20px;
 }
+
 .boton-info {
     position: relative;
     justify-content: relative;
@@ -58,7 +60,7 @@ ion-col {
     padding: 0 0px;
     margin-top: 20px;
     flex-direction: row;
-    box-shadow: 12px 4px 8px 0 rgb(127, 155, 129);
+    box-shadow: 12px 4px 8px 0 rgba(178, 178, 178, 0.283);
     transition: 0.3s;
     border-radius: 10px;
     margin: relative;

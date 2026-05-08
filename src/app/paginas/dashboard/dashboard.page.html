@@ -3,7 +3,31 @@
 
 <ion-content class="ion-padding">
   <ion-back-button routerLink="/inicio" class="boton-atras" text=""></ion-back-button>
+  <p class="titulo-descripcion">Recetas registradas:</p>
 
+  <ion-searchbar [(ngModel)]="searchQuery" placeholder="Buscar receta..." debounce="200"></ion-searchbar>
+
+  <p *ngIf="filteredRecipes.length === 0" class="mensaje-vacio">Aun no hay recetas registradas.</p>
+
+  <ion-card class="tarjeta-texto" color="sucess" *ngFor="let recipe of filteredRecipes"
+    (click)="toggleRecipe(recipe.id)">
+    <ion-card-content>
+      <b>{{ recipe.name }}</b>
+      <p>{{ recipe.description }}</p>
+
+      <div *ngIf="expandedId === recipe.id">
+        <p>Prep: {{ recipe.prepTime }} min | Coccion: {{ recipe.cookTime }} min | Porciones: {{ recipe.servings }}</p>
+
+        <p><b>Ingredientes:</b></p>
+        <p *ngFor="let ing of recipe.ingredients">- {{ ing.ingrediente }}: {{ ing.cantidad }}</p>
+
+        <p><b>Instrucciones:</b></p>
+        <p *ngFor="let step of recipe.instructions; let i = index">{{ i + 1 }}. {{ step }}</p>
+      </div>
+
+      <p class="toque-expandir" color="light">{{ expandedId === recipe.id ? 'cerrar' : 'ver más' }}</p>
+    </ion-card-content>
+  </ion-card>
   <ion-list>
     <ion-item>
       <ion-label position="stacked">Nombre de la receta</ion-label>
@@ -53,30 +77,6 @@
 
   <div class="separador"></div>
 
-  <p class="titulo-descripcion">Recetas registradas:</p>
 
-  <ion-searchbar [(ngModel)]="searchQuery" placeholder="Buscar receta..." debounce="200"></ion-searchbar>
-
-  <p *ngIf="filteredRecipes.length === 0" class="mensaje-vacio">Aun no hay recetas registradas.</p>
-
-  <ion-card class="tarjeta-texto" color="sucess" *ngFor="let recipe of filteredRecipes"
-    (click)="toggleRecipe(recipe.id)">
-    <ion-card-content>
-      <b>{{ recipe.name }}</b>
-      <p>{{ recipe.description }}</p>
-
-      <div *ngIf="expandedId === recipe.id">
-        <p>Prep: {{ recipe.prepTime }} min | Coccion: {{ recipe.cookTime }} min | Porciones: {{ recipe.servings }}</p>
-
-        <p><b>Ingredientes:</b></p>
-        <p *ngFor="let ing of recipe.ingredients">- {{ ing.ingrediente }}: {{ ing.cantidad }}</p>
-
-        <p><b>Instrucciones:</b></p>
-        <p *ngFor="let step of recipe.instructions; let i = index">{{ i + 1 }}. {{ step }}</p>
-      </div>
-
-      <p class="toque-expandir" color="light">{{ expandedId === recipe.id ? 'cerrar' : 'ver más' }}</p>
-    </ion-card-content>
-  </ion-card>
 
 </ion-content>
