@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { addDoc, collection, getDocs, limit, orderBy, query, serverTimestamp } from 'firebase/firestore';
+import { addDoc, collection, getDocs, orderBy, query, serverTimestamp } from 'firebase/firestore';
 import { db } from '../../firebase-config';
 
 interface RecipePreview {
@@ -31,6 +31,15 @@ export class DashboardPage implements OnInit {
   instructionsText = '';
   recentRecipes: RecipePreview[] = [];
   expandedId: string | null = null;
+  searchQuery = '';
+
+  get filteredRecipes(): RecipePreview[] {
+    const q = this.searchQuery.trim().toLowerCase();
+    if (!q) return this.recentRecipes.slice(0, 5);
+    return this.recentRecipes.filter(r =>
+      r.name.toLowerCase().includes(q) || r.description.toLowerCase().includes(q)
+    );
+  }
 
   constructor() { }
 
@@ -73,7 +82,7 @@ export class DashboardPage implements OnInit {
 
   async loadRecentRecipes() {
     try {
-      const q = query(collection(db, 'recipes'), orderBy('createdAt', 'desc'), limit(5));
+      const q = query(collection(db, 'recipes'), orderBy('createdAt', 'desc'));
       const snapshot = await getDocs(q);
       this.recentRecipes = snapshot.docs.map(doc => {
         const data = doc.data() as any;
