@@ -102,7 +102,19 @@ const routes: Routes = [
   {
     path: 'actividad-fisica',
     loadChildren: () => import('./paginas/actividad-fisica/actividad-fisica.module').then( m => m.ActividadFisicaPageModule)
+  },  {
+    path: 'adulto',
+    loadChildren: () => import('./paginas/categorias/adulto/adulto.module').then( m => m.AdultoPageModule)
+  },
+  {
+    path: 'adolescentes',
+    loadChildren: () => import('./paginas/categorias/adolescentes/adolescentes.module').then( m => m.AdolescentesPageModule)
+  },
+  {
+    path: 'adultos-mayores',
+    loadChildren: () => import('./paginas/categorias/adultos-mayores/adultos-mayores.module').then( m => m.AdultosMayoresPageModule)
   }
+
 
 
 
