@@ -19,7 +19,7 @@
     <ion-grid>
       <ion-row>
         <ion-col size="4">
-          <ion-button color="light" expand="block" fill="clear" routerLink="/futbol">
+          <ion-button color="light" expand="block" fill="clear" id="open-modal-futbol">
             <ion-card-content>
               <img src="/assets/futbol.png">
               <ion-button color="light" expand="block" fill="clear">Fútbol</ion-button>
@@ -28,7 +28,7 @@
         </ion-col>
 
         <ion-col size="4">
-          <ion-button color="light" expand="block" fill="clear" routerLink="/natacion">
+          <ion-button color="light" expand="block" fill="clear" id="open-modal-natacion">
             <ion-card-content>
               <img src="/assets/natacion.png">
               <ion-button color="light" expand="block" fill="clear">Natación</ion-button>
@@ -37,7 +37,7 @@
         </ion-col>
 
         <ion-col size="4">
-          <ion-button color="light" expand="block" fill="clear" routerLink="/basquetbol">
+          <ion-button color="light" expand="block" fill="clear" id="open-modal-basquetbol">
             <ion-card-content>
               <img src="/assets/basquet.png">
               <ion-button color="light" expand="block" fill="clear">Básquetbol</ion-button>
@@ -48,7 +48,7 @@
 
       <ion-row>
         <ion-col size="4">
-          <ion-button color="light" expand="block" fill="clear" routerLink="/ciclismo">
+          <ion-button color="light" expand="block" fill="clear" id="open-modal-ciclismo">
             <ion-card-content>
               <img src="/assets/bici.png">
               <ion-button color="light" expand="block" fill="clear">Ciclismo</ion-button>
@@ -57,7 +57,7 @@
         </ion-col>
 
         <ion-col size="4">
-          <ion-button color="light" expand="block" fill="clear" routerLink="/danza">
+          <ion-button color="light" expand="block" fill="clear" id="open-modal-danza">
             <ion-card-content>
               <img src="/assets/danza.png">
               <ion-button color="light" expand="block" fill="clear">Danza</ion-button>
@@ -66,7 +66,7 @@
         </ion-col>
 
         <ion-col size="4">
-          <ion-button color="light" expand="block" fill="clear" routerLink="/pesas">
+          <ion-button color="light" expand="block" fill="clear" id="open-modal-pesas">
             <ion-card-content>
               <img src="/assets/pesas.png">
               <ion-button color="light" expand="block" fill="clear">Pesas</ion-button>
@@ -76,3 +76,185 @@
       </ion-row>
     </ion-grid>
   </div>
+
+  <ion-modal trigger="open-modal-futbol" [initialBreakpoint]="0.85" [breakpoints]="[0, 0.85, 1]">
+    <ng-template>
+      <ion-header>
+        <ion-toolbar>
+          <ion-title>⚽ Fútbol y Diabetes</ion-title>
+        </ion-toolbar>
+      </ion-header>
+      <ion-content color="light" class="ion-padding">
+        <h3>¿Qué es y qué beneficios tiene?</h3>
+        <p>Es un deporte intermitente de alta intensidad. Alternar sprints con caminatas mejora drásticamente la capacidad cardiovascular y ayuda a que los músculos absorban la glucosa circulante de forma inmediata.</p>
+        
+        <h3>¿Cómo se hace correctamente?</h3>
+        <p>Realiza un calentamiento previo de 10 minutos para avisar al cuerpo. Evita las entradas bruscas o sobreesfuerzos extremas si no has entrenado previamente.</p>
+        
+        <h3>Tiempo sugerido por edad:</h3>
+        <ul>
+          <li><strong>Adolescentes:</strong> 60 minutos (3 veces por semana).</li>
+          <li><strong>Adultos:</strong> 45-60 minutos (2-3 veces por semana).</li>
+          <li><strong>Adultos Mayores:</strong> Se recomienda adaptarlo a caminata rápida o fútbol sala de baja intensidad (30 minutos).</li>
+        </ul>
+        
+        <ion-card color="warning" style="margin: 15px 0;">
+          <ion-card-content>
+            <strong>⚠️ Alerta de Seguridad:</strong> Mide tus niveles antes del partido. Si tu glucosa está por debajo de 100 mg/dL, come un snack. Inspecciona tus pies al terminar para descartar ampollas o rozaduras por los tacos.
+          </ion-card-content>
+        </ion-card>
+      </ion-content>
+    </ng-template>
+  </ion-modal>
+
+  <ion-modal trigger="open-modal-natacion" [initialBreakpoint]="0.85" [breakpoints]="[0, 0.85, 1]">
+    <ng-template>
+      <ion-header>
+        <ion-toolbar>
+          <ion-title>🏊 Natación y Diabetes</ion-title>
+        </ion-toolbar>
+      </ion-header>
+      <ion-content color="light" class="ion-padding">
+        <h3>¿Qué es y qué beneficios tiene?</h3>
+        <p>Uno de los mejores ejercicios aeróbicos de bajo impacto. Al no haber gravedad directa sobre las articulaciones, reduce drásticamente el riesgo de lesiones físicas mientras se quema glucosa de manera uniforme.</p>
+        
+        <h3>¿Cómo se hace correctamente?</h3>
+        <p>Mantén un ritmo constante usando estilos como crol, dorso o braza. No olvides respirar adecuadamente y no aguantar el aire bajo el agua por periodos largos.</p>
+        
+        <h3>Tiempo sugerido por edad:</h3>
+        <ul>
+          <li><strong>Adolescentes:</strong> 45-60 minutos continuos.</li>
+          <li><strong>Adultos:</strong> 30-45 minutos por sesión.</li>
+          <li><strong>Adultos Mayores:</strong> 20-35 minutos de nado suave o aquaeróbics.</li>
+        </ul>
+        
+        <ion-card color="warning" style="margin: 15px 0;">
+          <ion-card-content>
+            <strong>⚠️ Alerta de Seguridad:</strong> El agua fría puede camuflar los síntomas de una hipoglucemia (como el sudor frío). Deja siempre un jugo o carbohidrato rápido visible en el borde de la piscina. Usa calzado especial al salir para evitar hongos o cortes.
+          </ion-card-content>
+        </ion-card>
+      </ion-content>
+    </ng-template>
+  </ion-modal>
+
+  <ion-modal trigger="open-modal-basquetbol" [initialBreakpoint]="0.85" [breakpoints]="[0, 0.85, 1]">
+    <ng-template>
+      <ion-header>
+        <ion-toolbar>
+          <ion-title>🏀 Básquetbol y Diabetes</ion-title>
+        </ion-toolbar>
+      </ion-header>
+      <ion-content color="light" class="ion-padding">
+        <h3>¿Qué es y qué beneficios tiene?</h3>
+        <p>Deporte de equipo que combina coordinación, agilidad y resistencia aeróbica. Ayuda a controlar el peso corporal y optimiza los niveles de hemoglobina glucosilada de forma natural.</p>
+        
+        <h3>¿Cómo se hace correctamente?</h3>
+        <p>Practica lanzamientos de forma individual o participa en partidos recreativos. Asegúrate de tomar descansos cada 15 minutos de juego para no fatigar en exceso al organismo.</p>
+        
+        <h3>Tiempo sugerido por edad:</h3>
+        <ul>
+          <li><strong>Adolescentes:</strong> 50-60 minutos de juego activo.</li>
+          <li><strong>Adultos:</strong> 35-50 minutos por sesión.</li>
+          <li><strong>Adultos Mayores:</strong> Se aconseja limitar a dinámicas de pases y tiros al aro sin contacto físico (20-30 minutos).</li>
+        </ul>
+        
+        <ion-card color="warning" style="margin: 15px 0;">
+          <ion-card-content>
+            <strong>⚠️ Alerta de Seguridad:</strong> Los saltos y frenados rápidos exigen mucho desgaste muscular. Lleva contigo una bebida con electrolitos e hidrátate constantemente. Usa zapatillas con buena amortiguación.
+          </ion-card-content>
+        </ion-card>
+      </ion-content>
+    </ng-template>
+  </ion-modal>
+
+  <ion-modal trigger="open-modal-ciclismo" [initialBreakpoint]="0.85" [breakpoints]="[0, 0.85, 1]">
+    <ng-template>
+      <ion-header>
+        <ion-toolbar>
+          <ion-title>🚴 Ciclismo y Diabetes</ion-title>
+        </ion-toolbar>
+      </ion-header>
+      <ion-content color="light" class="ion-padding">
+        <h3>¿Qué es y qué beneficios tiene?</h3>
+        <p>Un ejercicio cardiovascular rítmico excepcional. El movimiento constante de las piernas consume grandes cantidades de glucosa y mejora significativamente la sensibilidad a la insulina celular.</p>
+        
+        <h3>¿Cómo se hace correctamente?</h3>
+        <p>Puedes usar bicicleta estática en casa o salir a rutas tranquilas. Mantén una postura erguida y un ritmo de pedaleo donde puedas hablar fluidamente sin agitarte en extremo.</p>
+        
+        <h3>Tiempo sugerido por edad:</h3>
+        <ul>
+          <li><strong>Adolescentes:</strong> 45-60 minutos de ruta regular.</li>
+          <li><strong>Adultos:</strong> 30-45 minutos (3 a 4 veces por semana).</li>
+          <li><strong>Adultos Mayores:</strong> 20-30 minutos en bicicleta fija con resistencia baja para proteger rodillas.</li>
+        </ul>
+        
+        <ion-card color="warning" style="margin: 15px 0;">
+          <ion-card-content>
+            <strong>⚠️ Alerta de Seguridad:</strong> Si sales al aire libre, planea rutas conocidas y avisa a alguien. Siempre viaja con un paquete de caramelos, gomitas o fruta en tu ropa por si se presenta una baja de azúcar imprevista.
+          </ion-card-content>
+        </ion-card>
+      </ion-content>
+    </ng-template>
+  </ion-modal>
+
+  <ion-modal trigger="open-modal-danza" [initialBreakpoint]="0.85" [breakpoints]="[0, 0.85, 1]">
+    <ng-template>
+      <ion-header>
+        <ion-toolbar>
+          <ion-title>💃 Danza y Diabetes</ion-title>
+        </ion-toolbar>
+      </ion-header>
+      <ion-content color="light" class="ion-padding">
+        <h3>¿Qué es y qué beneficios tiene?</h3>
+        <p>Actividad física y artística que reduce el estrés mental. Dado que el estrés libera cortisol (hormona que eleva los niveles de azúcar), bailar ayuda directamente a regular la glucosa mientras te diviertes.</p>
+        
+        <h3>¿Cómo se hace correctamente?</h3>
+        <p>Elige tu ritmo preferido (Salsa, Zumba, ritmos tropicales). Sigue la música manteniendo movimientos continuos de pies, cadera y brazos sin forzar giros peligrosos.</p>
+        
+        <h3>Tiempo sugerido por edad:</h3>
+        <ul>
+          <li><strong>Adolescentes:</strong> Clases de 45 a 60 minutos dinámicos.</li>
+          <li><strong>Adultos:</strong> 40-50 minutos estables.</li>
+          <li><strong>Adultos Mayores:</strong> 30 minutos de baile de salón o ritmos de bajo impacto.</li>
+        </ul>
+        
+        <ion-card color="warning" style="margin: 15px 0;">
+          <ion-card-content>
+            <strong>⚠️ Alerta de Seguridad:</strong> Tus pies son la prioridad. Nunca bailes descalzo(a) y utiliza calzado cómodo que no cause puntos de presión o ampollas. Revisa tus pies minuciosamente después de cada sesión.
+          </ion-card-content>
+        </ion-card>
+      </ion-content>
+    </ng-template>
+  </ion-modal>
+
+  <ion-modal trigger="open-modal-pesas" [initialBreakpoint]="0.85" [breakpoints]="[0, 0.85, 1]">
+    <ng-template>
+      <ion-header>
+        <ion-toolbar>
+          <ion-title>🏋️ Pesas y Diabetes</ion-title>
+        </ion-toolbar>
+      </ion-header>
+      <ion-content color="light" class="ion-padding">
+        <h3>¿Qué es y qué beneficios tiene?</h3>
+        <p>Entrenamiento de fuerza y resistencia muscular. El desarrollo de masa muscular es una de las mejores defensas contra la diabetes, ya que el tejido muscular consume glucosa constantemente, incluso cuando estás en completo reposo.</p>
+        
+        <h3>¿Cómo se hace correctamente?</h3>
+        <p>Utiliza mancuernas ligeras, bandas elásticas o tu propio peso corporal. Concéntrate en hacer movimientos controlados y lentos priorizando siempre la postura sobre la cantidad de peso.</p>
+        
+        <h3>Tiempo sugerido por edad:</h3>
+        <ul>
+          <li><strong>Adolescentes:</strong> 30-40 minutos con supervisión técnica (2 veces por semana).</li>
+          <li><strong>Adultos:</strong> 25-35 minutos enfocados en circuitos completos.</li>
+          <li><strong>Adultos Mayores:</strong> 15-25 minutos usando bandas elásticas o mancuernas muy livianas para mantener la autonomía motriz.</li>
+        </ul>
+        
+        <ion-card color="warning" style="margin: 15px 0;">
+          <ion-card-content>
+            <strong>⚠️ Alerta de Seguridad:</strong> Respira de forma fluida: no contengas el aire al levantar la carga para prevenir picos de presión arterial alta. Evita entrenar fuerza si tus niveles de glucosa en ayunas superan los 250 mg/dL.
+          </ion-card-content>
+        </ion-card>
+      </ion-content>
+    </ng-template>
+  </ion-modal>
+
+</ion-content>
