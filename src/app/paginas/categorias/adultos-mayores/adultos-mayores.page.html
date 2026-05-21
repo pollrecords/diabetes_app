@@ -15,11 +15,12 @@
       </ion-row>
     </ion-grid>
   </div>
-  <div>
+  <div class="container">
     <ion-grid>
       <ion-row>
         <ion-col size="4">
-          <ion-button color="light" expand="block" fill="clear" routerLink="/taichi"><ion-card-content>
+          <ion-button color="light" expand="block" fill="clear" id="modal-mayor-taichi">
+            <ion-card-content>
               <img src="/assets/taichi.png">
               <ion-button color="light" expand="block" fill="clear">Tai Chi</ion-button>
             </ion-card-content>
@@ -27,7 +28,7 @@
         </ion-col>
 
         <ion-col size="4">
-          <ion-button color="light" expand="block" fill="clear"  routerLink="/aquagym">
+          <ion-button color="light" expand="block" fill="clear" id="modal-mayor-aquagym">
             <ion-card-content>
               <img src="/assets/aquagym.png">
               <ion-button color="light" expand="block" fill="clear">Aquagym</ion-button>
@@ -36,7 +37,7 @@
         </ion-col>
 
         <ion-col size="4">
-          <ion-button color="light" expand="block" fill="clear"  routerLink="/caminata-suave">
+          <ion-button color="light" expand="block" fill="clear" id="modal-mayor-caminata">
             <ion-card-content>
               <img src="/assets/caminata_suave.png">
               <ion-button color="light" expand="block" fill="clear">Caminata</ion-button>
@@ -47,7 +48,7 @@
 
       <ion-row>
         <ion-col size="4">
-          <ion-button color="light" expand="block" fill="clear" routerLink="/yoga-silla">
+          <ion-button color="light" expand="block" fill="clear" id="modal-mayor-yoga">
             <ion-card-content>
               <img src="/assets/yoga_silla.png">
               <ion-button color="light" expand="block" fill="clear">Yoga</ion-button>
@@ -56,7 +57,7 @@
         </ion-col>
 
         <ion-col size="4">
-          <ion-button color="light" expand="block" fill="clear" routerLink="/bandas">
+          <ion-button color="light" expand="block" fill="clear" id="modal-mayor-bandas">
             <ion-card-content>
               <img src="/assets/bandas.png">
               <ion-button color="light" expand="block" fill="clear">Bandas</ion-button>
@@ -65,7 +66,7 @@
         </ion-col>
 
         <ion-col size="4">
-          <ion-button color="light" expand="block" fill="clear" routerLink="/baile">
+          <ion-button color="light" expand="block" fill="clear" id="modal-mayor-baile">
             <ion-card-content>
               <img src="/assets/baile.png">
               <ion-button color="light" expand="block" fill="clear">Baile</ion-button>
@@ -75,4 +76,161 @@
       </ion-row>
     </ion-grid>
   </div>
+
+  <ion-modal trigger="modal-mayor-taichi" [initialBreakpoint]="0.85" [breakpoints]="[0, 0.85, 1]">
+    <ng-template>
+      <ion-header>
+        <ion-toolbar>
+          <ion-title>☯️ Tai Chi - Adultos Mayores</ion-title>
+        </ion-toolbar>
+      </ion-header>
+      <ion-content color="light" class="ion-padding">
+        <h3>¿Qué es y en qué ayuda?</h3>
+        <p>Es un ejercicio de mente y cuerpo que combina movimientos lentos, meditación y respiración profunda. Ayuda enormemente a mejorar el equilibrio y la fuerza muscular, reduciendo el riesgo de caídas, mientras disminuye la glucosa de forma suave.</p>
+        
+        <h3>¿Cómo se hace?</h3>
+        <p>Sigue secuencias fluidas de movimientos continuos sin detener la respiración. Concéntrate en la transferencia de peso de una pierna a otra con suavidad.</p>
+        
+        <h3>¿Cuánto tiempo?</h3>
+        <p>Se recomiendan sesiones de <strong>20 a 30 minutos</strong>, de 2 a 3 veces por semana.</p>
+        
+        <ion-card color="warning" style="margin: 15px 0;">
+          <ion-card-content>
+            <strong>⚠️ Consejo de Diabetes:</strong> Al requerir mucha estabilidad, asegúrate de practicarlo en una superficie plana y antideslizante. Ten una silla cerca si llegas a sentir debilidad o un mareo por baja de azúcar.
+          </ion-card-content>
+        </ion-card>
+      </ion-content>
+    </ng-template>
+  </ion-modal>
+
+  <ion-modal trigger="modal-mayor-aquagym" [initialBreakpoint]="0.85" [breakpoints]="[0, 0.85, 1]">
+    <ng-template>
+      <ion-header>
+        <ion-toolbar>
+          <ion-title>🌊 Aquagym - Adultos Mayores</ion-title>
+        </ion-toolbar>
+      </ion-header>
+      <ion-content color="light" class="ion-padding">
+        <h3>¿Qué es y en qué ayuda?</h3>
+        <p>Gimnasia acuática de bajo impacto. El agua reduce el impacto en las rodillas y columna, permitiendo realizar ejercicios de resistencia física de forma segura para quemar glucosa sin maltratar las articulaciones.</p>
+        
+        <h3>¿Cómo se hace?</h3>
+        <p>Realiza caminatas dentro del agua, elevaciones de piernas o movimientos de brazos usando la resistencia natural del agua o flotadores ligeros.</p>
+        
+        <h3>¿Cuánto tiempo?</h3>
+        <p>Sesiones de <strong>30 minutos</strong> a intensidad leve o moderada, 2 o 3 veces por semana.</p>
+        
+        <ion-card color="warning" style="margin: 15px 0;">
+          <ion-card-content>
+            <strong>⚠️ Consejo de Diabetes:</strong> Estar en el agua disminuye la percepción de los síntomas de la hipoglucemia (como el sudor). Monitorea tus niveles antes de entrar a la alberca y usa calzado acuático para evitar resbalones o heridas en los pies.
+          </ion-card-content>
+        </ion-card>
+      </ion-content>
+    </ng-template>
+  </ion-modal>
+
+  <ion-modal trigger="modal-mayor-caminata" [initialBreakpoint]="0.85" [breakpoints]="[0, 0.85, 1]">
+    <ng-template>
+      <ion-header>
+        <ion-toolbar>
+          <ion-title>🚶 Caminata - Adultos Mayores</ion-title>
+        </ion-toolbar>
+      </ion-header>
+      <ion-content color="light" class="ion-padding">
+        <h3>¿Qué es y en qué ayuda?</h3>
+        <p>El ejercicio cardiovascular más natural y efectivo. Mantiene la circulación activa (crucial para prevenir problemas circulatorios de la diabetes) y ayuda a captar el azúcar en sangre de manera eficiente.</p>
+        
+        <h3>¿Cómo se hace?</h3>
+        <p>Camina a un paso cómodo que te permita hablar sin agitarte. Levanta bien los pies del piso para evitar tropezones.</p>
+        
+        <h3>¿Cuánto tiempo?</h3>
+        <p>De <strong>20 a 30 minutos al día</strong>. Si es muy pesado, se puede dividir en dos caminatas de 15 minutos (una en la mañana y otra en la tarde).</p>
+        
+        <ion-card color="warning" style="margin: 15px 0;">
+          <ion-card-content>
+            <strong>⚠️ Consejo de Diabetes:</strong> Es sumamente recomendable caminar unos 20 minutos después de comer para controlar los niveles altos de glucosa. Usa calzado ortopédico o deportivo adecuado y revisa tus pies al regresar a casa.
+          </ion-card-content>
+        </ion-card>
+      </ion-content>
+    </ng-template>
+  </ion-modal>
+
+  <ion-modal trigger="modal-mayor-yoga" [initialBreakpoint]="0.85" [breakpoints]="[0, 0.85, 1]">
+    <ng-template>
+      <ion-header>
+        <ion-toolbar>
+          <ion-title>🪑 Yoga en Silla - Adultos Mayores</ion-title>
+        </ion-toolbar>
+      </ion-header>
+      <ion-content color="light" class="ion-padding">
+        <h3>¿Qué es y en qué ayuda?</h3>
+        <p>Adaptación del yoga tradicional utilizando una silla como apoyo. Reduce el estrés (bajando los niveles de azúcar provocados por tensiones mentales), mejora la flexibilidad y la postura sin arriesgar el equilibrio.</p>
+        
+        <h3>¿Cómo se hace?</h3>
+        <p>Sentado correctamente o apoyado firmemente del respaldo de la silla, realiza estiramientos suaves de columna, brazos y piernas coordinados con la respiración.</p>
+        
+        <h3>¿Cuánto tiempo?</h3>
+        <p>Sesiones de <strong>15 a 25 minutos</strong> de estiramientos controlados, de 3 a 4 veces por semana.</p>
+        
+        <ion-card color="warning" style="margin: 15px 0;">
+          <ion-card-content>
+            <strong>⚠️ Consejo de Diabetes:</strong> Evita hacer movimientos bruscos al agacharte o levantarte para prevenir mareos por cambios de presión. Mantén la espalda bien apoyada.
+          </ion-card-content>
+        </ion-card>
+      </ion-content>
+    </ng-template>
+  </ion-modal>
+
+  <ion-modal trigger="modal-mayor-bandas" [initialBreakpoint]="0.85" [breakpoints]="[0, 0.85, 1]">
+    <ng-template>
+      <ion-header>
+        <ion-toolbar>
+          <ion-title>💪 Bandas elásticas - Adultos Mayores</ion-title>
+        </ion-toolbar>
+      </ion-header>
+      <ion-content color="light" class="ion-padding">
+        <h3>¿Qué es y en qué ayuda?</h3>
+        <p>Entrenamiento de fuerza ligera. Mantener la masa muscular en el adulto mayor es vital, ya que los músculos actúan como "motores" que consumen el azúcar de la sangre de forma continua.</p>
+        
+        <h3>¿Cómo se hace?</h3>
+        <p>Utiliza bandas elásticas de baja resistencia (color claro generalmente). Realiza aperturas de brazos o extensiones de piernas de manera lenta y controlada.</p>
+        
+        <h3>¿Cuánto tiempo?</h3>
+        <p>De <strong>15 a 20 minutos por sesión</strong>, dejando un día de descanso entre entrenamientos (2 veces por semana).</p>
+        
+        <ion-card color="warning" style="margin: 15px 0;">
+          <ion-card-content>
+            <strong>⚠️ Consejo de Diabetes:</strong> Respira con normalidad mientras estiras la banda; nunca aguantes el aire (apnea), ya que esto puede elevar tu presión arterial.
+          </ion-card-content>
+        </ion-card>
+      </ion-content>
+    </ng-template>
+  </ion-modal>
+
+  <ion-modal trigger="modal-mayor-baile" [initialBreakpoint]="0.85" [breakpoints]="[0, 0.85, 1]">
+    <ng-template>
+      <ion-header>
+        <ion-toolbar>
+          <ion-title>💃 Baile Suave - Adultos Mayores</ion-title>
+        </ion-toolbar>
+      </ion-header>
+      <ion-content color="light" class="ion-padding">
+        <h3>¿Qué es y en qué ayuda?</h3>
+        <p>Ejercicio cardiovascular de bajo impacto y muy alegre. Estimula la memoria coreográfica, el estado de ánimo y ayuda al cuerpo a utilizar la insulina eficientemente mientras se queman calorías al compás de la música.</p>
+        
+        <h3>¿Cómo se hace?</h3>
+        <p>Baila ritmos de salón o música tranquila (como danzón, ritmos tropicales lentos o zumba gold). Evita dar saltos o giros rápidos que puedan comprometer tu estabilidad.</p>
+        
+        <h3>¿Cuánto tiempo?</h3>
+        <p>Sesiones de <strong>20 a 30 minutos</strong> con pequeñas pausas intermedias para tomar agua.</p>
+        
+        <ion-card color="warning" style="margin: 15px 0;">
+          <ion-card-content>
+            <strong>⚠️ Consejo de Diabetes:</strong> Los pies en el adulto mayor requieren cuidado extremo. No uses zapatos rígidos ni bailes en sandalias o descalzo. Revisa que tus pies no tengan zonas rojas o ampollas al terminar.
+          </ion-card-content>
+        </ion-card>
+      </ion-content>
+    </ng-template>
+  </ion-modal>
+
 </ion-content>

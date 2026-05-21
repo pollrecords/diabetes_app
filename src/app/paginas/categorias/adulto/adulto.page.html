@@ -19,7 +19,7 @@
     <ion-grid>
       <ion-row>
         <ion-col size="4">
-          <ion-button color="light" expand="block" fill="clear" routerLink="/caminata">
+          <ion-button color="light" expand="block" fill="clear" id="modal-adulto-caminata">
             <ion-card-content>
               <img src="/assets/caminata.png">
               <ion-button color="light" expand="block" fill="clear">Caminata</ion-button>
@@ -28,7 +28,7 @@
         </ion-col>
 
         <ion-col size="4">
-          <ion-button color="light" expand="block" fill="clear" routerLink="/hiit">
+          <ion-button color="light" expand="block" fill="clear" id="modal-adulto-hiit">
             <ion-card-content>
               <img src="/assets/hiit.png">
               <ion-button color="light" expand="block" fill="clear">HIIT</ion-button>
@@ -37,7 +37,7 @@
         </ion-col>
 
         <ion-col size="4">
-          <ion-button color="light" expand="block" fill="clear" routerLink="/yoga">
+          <ion-button color="light" expand="block" fill="clear" id="modal-adulto-yoga">
             <ion-card-content>
               <img src="/assets/yoga.png">
               <ion-button color="light" expand="block" fill="clear">Yoga</ion-button>
@@ -48,7 +48,7 @@
 
       <ion-row>
         <ion-col size="4">
-          <ion-button color="light" expand="block" fill="clear" routerLink="/zumba">
+          <ion-button color="light" expand="block" fill="clear" id="modal-adulto-zumba">
             <ion-card-content>
               <img src="/assets/zumba.png">
               <ion-button color="light" expand="block" fill="clear">Zumba</ion-button>
@@ -57,7 +57,7 @@
         </ion-col>
 
         <ion-col size="4">
-          <ion-button color="light" expand="block" fill="clear" routerLink="/pilates">
+          <ion-button color="light" expand="block" fill="clear" id="modal-adulto-pilates">
             <ion-card-content>
               <img src="/assets/pilates.png">
               <ion-button color="light" expand="block" fill="clear">Pilates</ion-button>
@@ -66,7 +66,7 @@
         </ion-col>
 
         <ion-col size="4">
-          <ion-button color="light" expand="block" fill="clear" routerLink="/running">
+          <ion-button color="light" expand="block" fill="clear" id="modal-adulto-running">
             <ion-card-content>
               <img src="/assets/running.png">
               <ion-button color="light" expand="block" fill="clear">Running</ion-button>
@@ -76,4 +76,161 @@
       </ion-row>
     </ion-grid>
   </div>
+
+  <ion-modal trigger="modal-adulto-caminata" [initialBreakpoint]="0.85" [breakpoints]="[0, 0.85, 1]">
+    <ng-template>
+      <ion-header>
+        <ion-toolbar>
+          <ion-title>🚶 Caminata para Adultos</ion-title>
+        </ion-toolbar>
+      </ion-header>
+      <ion-content color="light" class="ion-padding">
+        <h3>¿Qué es y en qué ayuda al adulto?</h3>
+        <p>Es una actividad aeróbica de bajo impacto ideal para el día a día. Ayuda a controlar el peso corporal, disminuye el estrés laboral o cotidiano y mantiene estables los niveles basales de glucosa en sangre.</p>
+        
+        <h3>¿Cómo se hace?</h3>
+        <p>Camina a un paso moderado-rápido donde sientas que el corazón se activa, manteniendo una postura erguida y los brazos balanceándose de forma natural.</p>
+        
+        <h3>¿Cuánto tiempo?</h3>
+        <p>Se recomiendan de <strong>30 a 45 minutos por sesión</strong>, idealmente con una frecuencia de 5 días a la semana para cumplir con las metas cardiovasculares estándar.</p>
+        
+        <ion-card color="warning" style="margin: 15px 0;">
+          <ion-card-content>
+            <strong>⚠️ Consejo de Diabetes:</strong> Aprovecha a caminar de 30 a 60 minutos después de las comidas principales; esto ayuda enormemente a que los músculos absorban los carbohidratos digeridos, evitando picos altos de azúcar.
+          </ion-card-content>
+        </ion-card>
+      </ion-content>
+    </ng-template>
+  </ion-modal>
+
+  <ion-modal trigger="modal-adulto-hiit" [initialBreakpoint]="0.85" [breakpoints]="[0, 0.85, 1]">
+    <ng-template>
+      <ion-header>
+        <ion-toolbar>
+          <ion-title>⚡ HIIT para Adultos</ion-title>
+        </ion-toolbar>
+      </ion-header>
+      <ion-content color="light" class="ion-padding">
+        <h3>¿Qué es y en qué ayuda al adulto?</h3>
+        <p>Entrenamiento de Intervalos de Alta Intensidad. Es ideal para adultos con poco tiempo, ya que optimiza el uso del glucógeno muscular y mejora drásticamente la sensibilidad a la insulina en sesiones muy cortas.</p>
+        
+        <h3>¿Cómo se hace?</h3>
+        <p>Alterna 30 segundos de ejercicio muy intenso (ej. sentadillas rápidas o escaladores) con 60 segundos de recuperación pasiva o caminata lenta.</p>
+        
+        <h3>¿Cuánto tiempo?</h3>
+        <p>Sesiones breves de solo <strong>15 a 20 minutos en total</strong>, realizando esta rutina un maximum de 2 a 3 veces por semana para permitir una correcta recuperación muscular.</p>
+        
+        <ion-card color="warning" style="margin: 15px 0;">
+          <ion-card-content>
+            <strong>⚠️ Consejo de Diabetes:</strong> Al ser muy intenso, la adrenalina puede elevar la glucosa al principio y tumbarla horas después. No lo hagas si tus niveles de azúcar están inestables o si tienes retinopatía proliferativa activa.
+          </ion-card-content>
+        </ion-card>
+      </ion-content>
+    </ng-template>
+  </ion-modal>
+
+  <ion-modal trigger="modal-adulto-yoga" [initialBreakpoint]="0.85" [breakpoints]="[0, 0.85, 1]">
+    <ng-template>
+      <ion-header>
+        <ion-toolbar>
+          <ion-title>🧘 Yoga para Adultos</ion-title>
+        </ion-toolbar>
+      </ion-header>
+      <ion-content color="light" class="ion-padding">
+        <h3>¿Qué es y en qué ayuda al adulto?</h3>
+        <p>Disciplina que combina flexibilidad, control de la respiración y fuerza estática. Su mayor beneficio para el adulto es la reducción del cortisol (la hormona del estrés), la cual es culpable de elevar los niveles de azúcar en ayunas.</p>
+        
+        <h3>¿Cómo se hace?</h3>
+        <p>Sigue una secuencia fluida de posturas (asanas) manteniendo la concentración en la respiración nasal profunda y controlando el equilibrio corporal.</p>
+        
+        <h3>¿Cuánto tiempo?</h3>
+        <p>Sesiones de <strong>30 a 50 minutos</strong>, practicado de 3 a 4 veces por semana. Puedes alternarlo perfectamente con tus rutinas de cardio.</p>
+        
+        <ion-card color="warning" style="margin: 15px 0;">
+          <ion-card-content>
+            <strong>⚠️ Consejo de Diabetes:</strong> Si tienes complicaciones de la diabetes como presión alta o retinopatía, evita mantener la cabeza completamente hacia abajo (posturas invertidas prolongadas) para proteger tus vasos sanguíneos oculares.
+          </ion-card-content>
+        </ion-card>
+      </ion-content>
+    </ng-template>
+  </ion-modal>
+
+  <ion-modal trigger="modal-adulto-zumba" [initialBreakpoint]="0.85" [breakpoints]="[0, 0.85, 1]">
+    <ng-template>
+      <ion-header>
+        <ion-toolbar>
+          <ion-title>🎵 Zumba para Adultos</ion-title>
+        </ion-toolbar>
+      </ion-header>
+      <ion-content color="light" class="ion-padding">
+        <h3>¿Qué es y en qué ayuda al adulto?</h3>
+        <p>Un ejercicio cardiovascular rítmico basado en coreografías de baile. Ayuda al adulto a quemar calorías de forma divertida, mejora la salud del corazón y aumenta la resistencia sin que se sienta como una carga pesada de gimnasio.</p>
+        
+        <h3>¿Cómo se hace?</h3>
+        <p>Sigue el ritmo de la música coordinando los pasos. Modula la intensidad de tus movimientos de acuerdo a tu condición física actual sin necesidad de sobreesfuerzos extremos.</p>
+        
+        <h3>¿Cuánto tiempo?</h3>
+        <p>Clases completas de <strong>45 a 60 minutos por sesión</strong>, recomendadas unas 2 o 3 veces a la semana.</p>
+        
+        <ion-card color="warning" style="margin: 15px 0;">
+          <ion-card-content>
+            <strong>⚠️ Consejo de Diabetes:</strong> El baile implica mucho movimiento continuo de pies. Usa tenis deportivos con buen soporte y calcetines protectores para evitar la formación de ampollas o heridas mecánicas.
+          </ion-card-content>
+        </ion-card>
+      </ion-content>
+    </ng-template>
+  </ion-modal>
+
+  <ion-modal trigger="modal-adulto-pilates" [initialBreakpoint]="0.85" [breakpoints]="[0, 0.85, 1]">
+    <ng-template>
+      <ion-header>
+        <ion-toolbar>
+          <ion-title>🤸 Pilates para Adultos</ion-title>
+        </ion-toolbar>
+      </ion-header>
+      <ion-content color="light" class="ion-padding">
+        <h3>¿Qué es y en qué ayuda al adulto?</h3>
+        <p>Entrenamiento centrado en el fortalecimiento del transverso abdominal, suelo pélvico y postura. Desarrollar masa muscular magra en el abdomen y espalda ayuda a incrementar el consumo metabólico de glucosa las 24 horas del día.</p>
+        
+        <h3>¿Cómo se hace?</h3>
+        <p>Realiza ejercicios precisos y lentos sobre colchoneta, enfocándote en la contracción muscular consciente y manteniendo el control de tu columna vertebral.</p>
+        
+        <h3>¿Cuánto tiempo?</h3>
+        <p>Rutinas de <strong>30 a 45 minutos por sesión</strong>, ideales si se realizan 2 o 3 veces por semana.</p>
+        
+        <ion-card color="warning" style="margin: 15px 0;">
+          <ion-card-content>
+            <strong>⚠️ Consejo de Diabetes:</strong> No contengas la respiración durante los esfuerzos de fuerza sostenida (apnea). Mantener el flujo de oxígeno constante evita picos peligrosos en la presión arterial.
+          </ion-card-content>
+        </ion-card>
+      </ion-content>
+    </ng-template>
+  </ion-modal>
+
+  <ion-modal trigger="modal-adulto-running" [initialBreakpoint]="0.85" [breakpoints]="[0, 0.85, 1]">
+    <ng-template>
+      <ion-header>
+        <ion-toolbar>
+          <ion-title>🏃 Running para Adultos</ion-title>
+        </ion-toolbar>
+      </ion-header>
+      <ion-content color="light" class="ion-padding">
+        <h3>¿Qué es y en qué ayuda al adulto?</h3>
+        <p>Carrera o trote continuo a pie. Es un quemador de glucosa sumamente potente y de alta demanda energética, ideal para disminuir los niveles de hemoglobina glucosilada y tonificar las piernas del adulto.</p>
+        
+        <h3>¿Cómo se hace?</h3>
+        <p>Mantén un trote fluido y estable. Si vas iniciando, aplica intervalos combinados: trota 3 minutos y camina 1 minuto para no fatigar tus articulaciones bruscamente.</p>
+        
+        <h3>¿Cuánto tiempo?</h3>
+        <p>De <strong>25 a 40 minutos continuos</strong>, practicado de 3 a 4 veces por semana dependiendo de la experiencia de carrera.</p>
+        
+        <ion-card color="warning" style="margin: 15px 0;">
+          <ion-card-content>
+            <strong>⚠️ Consejo de Diabetes:</strong> El running consume glucosa muy rápido. Carga siempre contigo un carbohidrato de rápida absorción (gel energético o gomitas) en tu ropa y monitoriza tus niveles de azúcar antes de salir a la ruta.
+          </ion-card-content>
+        </ion-card>
+      </ion-content>
+    </ng-template>
+  </ion-modal>
+
 </ion-content>

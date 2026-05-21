@@ -1,195 +1,263 @@
 <ion-header [translucent]="true">
 </ion-header>
 
-<ion-content>
+<ion-content [fullscreen]="true">
+  <ion-back-button defaultHref="/inicio" class="boton-atras"></ion-back-button>
 
-  <ion-content [fullscreen]="true">
-    <ion-back-button routerLink="/inicio" class="boton-atras"></ion-back-button>
-    <ion-grid>
+  <ion-grid class="ion-no-padding">
 
-      <ion-list-header>
-        <ion-label class="separador" class="titulo" color="dark">DATOS Y CIFRAS</ion-label>
-      </ion-list-header>
-      <ion-row class="ion-padding">
-        <ion-col size="12">
-          <ion-card color="dark">
-            <img src="assets/Personas con diabetes.png" alt="Estadísticas Mundiales" />
-            <ion-card-content>
-              <ion-text>
-                En 2021, se estimó que 537 millones de adultos (20-79 años) vivían con diabetes, lo que representa el
-                10,5% de la población mundial. Se prevé que esta cifra aumente a 643 millones para 2030 y a 783 millones
-                para 2045. Además, tres de cada cuatro personas con diabetes viven en países de ingresos bajos y medianos, 
-                y cerca del 44% de los adultos que padecen la enfermedad están sin diagnosticar, lo que eleva el riesgo 
-                de desarrollar complicaciones crónicas graves antes de recibir tratamiento. La diabetes también se ubica entre 
-                las primeras 10 causas de muerte a nivel global, siendo responsable de millones de fallecimientos anuales indirectos 
-                por fallas cardiovasculares y renales. El impacto económico global asociado al gasto sanitario por la diabetes alcanza 
-                cifras astronómicas, superando los 960 mil millones de dólares anuales, lo que representa una carga casi insostenible 
-                para los sistemas de salud pública internacionales. El aumento descontrolado de los casos se atribuye de manera directa 
-                al envejecimiento poblacional generalizado, la rápida urbanización de las comunidades en desarrollo, los cambios drásticos 
-                hacia estilos de vida sedentarios y la alarmante epidemia paralela de obesidad y sobrepeso que afecta a todos los grupos 
-                de edad en el planeta Tierra.
-              </ion-text>
-            </ion-card-content>
-          </ion-card>
-        </ion-col>
-      </ion-row>
+    <ion-row class="ion-justify-content-center">
+      <ion-col size="12" class="ion-text-center ion-padding-top">
+        <h2 class="titulo" style="color: var(--ion-color-dark); font-weight: bold; margin-bottom: 0;">DATOS Y CIFRAS</h2>
+      </ion-col>
+    </ion-row>
 
-      <ion-list-header>
-        <ion-label class="titulo" color="dark">SÍNTOMAS</ion-label>
-      </ion-list-header>
-      <ion-row class="ion-padding">
-        <ion-col size="12">
-          <ion-card class="separador" class="titulo" color="dark">
-            <img src="assets/sintomas_diabetes.jpg" alt="Síntomas Alerta" />
-            <ion-card-content>
-              <ion-item lines="none" color="transparent">
-                <ion-icon name="water-outline" slot="start" color="light"></ion-icon>
-                <ion-label color="light">Sensación de mucha sed (Polidipsia) y sequedad extrema en la boca debido a la deshidratación celular. Cuando los niveles de glucosa en sangre superan el umbral renal basal, los riñones se ven obligados a excretar el exceso de azúcar a través de la orina, arrastrando masivas cantidades de agua del cuerpo por un proceso de ósmosis. Esto desencadena una deshidratación profunda a nivel de los tejidos internos, enviando señales urgentes al cerebro para demandar líquidos de forma constante.</ion-label>
-              </ion-item>
-              <ion-item lines="none" color="transparent">
-                <ion-icon name="eye-outline" slot="start" color="light"></ion-icon>
-                <ion-label color="light">Visión borrosa y dificultad para enfocar por cambios de glucosa en los fluidos del cristalino ocular. La presencia elevada y sostenida de azúcar en el torrente sanguíneo altera el equilibrio osmótico de los ojos, provocando que los fluidos entren o salgan del cristalino de forma anómala, lo que modifica temporalmente su curvatura física y su capacidad de refracción de luz. Este síntoma suele ser transitorio y reversible una vez estabilizados los valores moleculares, pero confunde constantemente al paciente en etapas iniciales.</ion-label>
-              </ion-item>
-              <ion-item lines="none" color="transparent">
-                <ion-icon name="battery-dead-outline" slot="start" color="light"></ion-icon>
-                <ion-label color="light">Cansancio extremo, falta de energía (Astenia) y pérdida de peso rápida e inexplicable por falta de absorción celular de energía. Debido a la carencia absoluta de insulina o a la resistencia periférica de los receptores celulares, las células son incapaces de absorber la glucosa circulante en la sangre para transformarla en energía útil. El cuerpo interpreta esto como un estado de inanición prolongado y comienza a metabolizar aceleradamente sus propias reservas de tejido adiposo y masa muscular para subsistir.</ion-label>
-              </ion-item>
-              <ion-item lines="none" color="transparent">
-                <ion-icon name="restaurant-outline" slot="start" color="light"></ion-icon>
-                <ion-label color="light">Hambre insaciable (Polifagia) acompañada de micción muy frecuente (Poliuria), especialmente durante las noches. Las células del cuerpo, privadas de su combustible principal que es la glucosa, envían señales químicas continuas de hambre al hipotálamo, induciendo al paciente a comer porciones de alimentos mucho mayores de lo habitual. No obstante, comer más no soluciona el problema de base, incrementando la carga metabólica, elevando aún más la glucemia e intensificando el ciclo de orinar copiosamente durante todo el día.</ion-label>
-              </ion-item>
-            </ion-card-content>
-          </ion-card>
-        </ion-col>
-      </ion-row>
+    <ion-row class="ion-padding-horizontal">
+      <ion-col size="12">
+        <ion-card color="dark" class="ion-no-margin ion-margin-bottom">
+          <img src="assets/Personas con diabetes.png" alt="Estadísticas Mundiales" style="width: 100%; display: block;" />
+          <ion-card-content class="ion-text-justify">
+            En 2021, se estimó que 537 millones de adultos (20-79 años) vivían con diabetes, lo que representa el
+            10,5% de la población mundial. Se prevé que esta cifra aumente a 643 millones para 2030 y a 783 millones
+            para 2045. Además, tres de cada cuatro personas con diabetes viven en países de ingresos bajos y medianos, 
+            y cerca del 44% de los adultos que padecen la enfermedad están sin diagnosticar, lo que eleva el riesgo 
+            de desarrollar complicaciones crónicas graves antes de recibir tratamiento. La diabetes también se ubica entre 
+            las primeras 10 causas de muerte a nivel global, siendo responsable de millones de fallecimientos anuales indirectos 
+            por fallas cardiovasculares y renales. El impacto económico global asociado al gasto sanitario por la diabetes alcanza 
+            cifras astronómicas, superando los 960 mil millones de dólares anuales, lo que representa una carga casi insostenible 
+            para los sistemas de salud pública internacionales. El aumento descontrolado de los casos se atribuye de manera directa 
+            al envejecimiento poblacional generalizado, la rápida urbanización de las comunidades en desarrollo, los cambios drásticos 
+            hacia estilos de vida sedentarios y la alarmante epidemia paralela de obesidad y sobrepeso que afecta a todos los grupos 
+            de edad en el planeta Tierra.
+          </ion-card-content>
+        </ion-card>
+      </ion-col>
+    </ion-row>
 
-      <ion-list-header>
-        <ion-label class="separador" class="titulo" color="dark">TIPOS DE DIABETES</ion-label>
-      </ion-list-header>
+    <ion-row class="ion-justify-content-center">
+      <ion-col size="12" class="ion-text-center ion-padding-top">
+        <h2 class="titulo" style="color: var(--ion-color-dark); font-weight: bold; margin-bottom: 0;">SÍNTOMAS</h2>
+      </ion-col>
+    </ion-row>
 
-      <ion-card color="dark" mode="ios">
-        <ion-card-header>
-          <ion-card-title>Tipo 1</ion-card-title>
-        </ion-card-header>
-        <img src="assets/images/tipo1.jpg" alt="Diabetes Tipo 1" />
-        <ion-card-content>
-          Producción deficiente de insulina debido a una destrucción autoinmune mediada por linfocitos T de las células beta localizadas en los islotes de Langerhans dentro del páncreas. Requiere administración diaria de insulina exógena (por inyecciones subcutáneas múltiples o mediante sistemas avanzados de bomba de infusión continua) de por vida para regular los niveles de glucosa y evitar la cetoacidosis diabética, una complicación médica aguda que pone en riesgo la vida por el aumento de cuerpos cetónicos acídicos en la sangre. Suele diagnosticarse en niños, adolescentes y adultos jóvenes, manifestándose de manera abrupta e intensa. Actualmente no se conoce la causa ambiental exacta que desencadena este ataque del propio sistema inmunológico contra el páncreas, y no existen métodos de prevención validados científicamente, requiriendo un manejo multidisciplinario riguroso y diario por parte del paciente.
-        </ion-card-content>
-      </ion-card>
+    <ion-row class="ion-padding-horizontal">
+      <ion-col size="12">
+        <ion-card color="dark" class="ion-no-margin ion-margin-bottom">
+          <img src="assets/sintomas_diabetes.jpg" alt="Síntomas Alerta" style="width: 100%; display: block;" />
+          <ion-card-content>
+            <ion-item lines="none" color="transparent" class="ion-no-padding ion-margin-bottom">
+              <ion-icon name="water-outline" slot="start" color="light"></ion-icon>
+              <ion-label color="light" class="ion-text-wrap ion-text-justify">
+                <strong>Sensación de mucha sed (Polidipsia):</strong> Sequedad extrema en la boca debido a la deshidratación celular. Cuando los niveles de glucosa en sangre superan el umbral renal basal, los riñones se ven obligados a excretar el exceso de azúcar a través de la orina, arrastrando masivas cantidades de agua del cuerpo por un proceso de ósmosis. Esto desencadena una deshidratación profunda a nivel de los tejidos internos, enviando señales urgentes al cerebro para demandar líquidos de forma constante.
+              </ion-label>
+            </ion-item>
+            
+            <ion-item lines="none" color="transparent" class="ion-no-padding ion-margin-bottom">
+              <ion-icon name="eye-outline" slot="start" color="light"></ion-icon>
+              <ion-label color="light" class="ion-text-wrap ion-text-justify">
+                <strong>Visión borrosa:</strong> Dificultad para enfocar por cambios de glucosa en los fluidos del cristalino ocular. La presencia elevada y sostenida de azúcar en el torrente sanguíneo altera el equilibrio osmótico de los ojos, provocando que los fluidos entren o salgan del cristalino de forma anómala, lo que modifica temporalmente su curvatura física y su capacidad de refracción de luz. Este síntoma suele ser transitorio y reversible una vez estabilizados los valores moleculares, pero confunde constantemente al paciente en etapas iniciales.
+              </ion-label>
+            </ion-item>
+            
+            <ion-item lines="none" color="transparent" class="ion-no-padding ion-margin-bottom">
+              <ion-icon name="battery-dead-outline" slot="start" color="light"></ion-icon>
+              <ion-label color="light" class="ion-text-wrap ion-text-justify">
+                <strong>Cansancio extremo y falta de energía (Astenia):</strong> Pérdida de peso rápida e inexplicable por falta de absorción celular de energía. Debido a la carencia absoluta de insulina o a la resistencia periférica de los receptores celulares, las células son incapaces de absorber la glucosa circulante en la sangre para transformarla en energía útil. El cuerpo interpreta esto como un estado de inanición prolongado y comienza a metabolizar aceleradamente sus propias reservas de tejido adiposo y masa muscular para subsistir.
+              </ion-label>
+            </ion-item>
+            
+            <ion-item lines="none" color="transparent" class="ion-no-padding">
+              <ion-icon name="restaurant-outline" slot="start" color="light"></ion-icon>
+              <ion-label color="light" class="ion-text-wrap ion-text-justify">
+                <strong>Hambre insaciable (Polifagia):</strong> Acompañada de micción muy frecuente (Poliuria), especialmente durante las noches. Las células del cuerpo, privadas de su combustible principal que es la glucosa, envían señales químicas continuas de hambre al hipotálamo, induciendo al paciente a comer porciones de alimentos mucho mayores de lo habitual. No obstante, comer más no soluciona el problema de base, incrementando la carga metabólica, elevando aún más la glucemia e intensificando el ciclo de orinar copiosamente durante todo el día.
+              </ion-label>
+            </ion-item>
+          </ion-card-content>
+        </ion-card>
+      </ion-col>
+    </ion-row>
 
-      <ion-card color="dark" mode="ios">
-        <ion-card-header>
-          <ion-card-title>Tipo 2</ion-card-title>
-        </ion-card-header>
-        <img src="assets/images/tipo2.jpg" alt="Diabetes Tipo 2" />
-        <ion-card-content>
-          El cuerpo desarrolla resistencia periférica a la acción de la insulina en tejidos clave como el músculo esquelético, el tejido adiposo y el hígado. De forma progresiva, los islotes pancreáticos pierden la capacidad funcional de producir esta hormona en cantidades suficientes para compensar dicha resistencia celular. Representa aproximadamente el 95% de los casos diagnosticados a nivel mundial y su avance suele ser silencioso durante muchos años. Está estrechamente relacionada con factores de riesgo modificables como el sedentarismo crónico, la obesidad de distribución abdominal, la hipertensión arterial y una dieta basada en carbohidratos ultraprocesados. Se puede prevenir, retrasar o incluso lograr la remisión clínica mediante cambios profundos y sostenidos en el estilo de vida, acompañados de un diagnóstico médico precoz y oportuno que evite secuelas a largo plazo.
-        </ion-card-content>
-      </ion-card>
+    <ion-row class="ion-justify-content-center">
+      <ion-col size="12" class="ion-text-center ion-padding-top">
+        <h2 class="titulo" style="color: var(--ion-color-dark); font-weight: bold; margin-bottom: 0;">TIPOS DE DIABETES</h2>
+      </ion-col>
+    </ion-row>
 
-      <ion-card color="dark" mode="ios">
-        <ion-card-header>
-          <ion-card-title>Gestacional</ion-card-title>
-        </ion-card-header>
-        <img src="assets/images/gestacional.jpg" alt="Diabetes Gestacional" />
-        <ion-card-content>
-          Es un tipo de intolerancia a los carbohidratos que genera hiperglucemia de severidad variable y que se detecta por primera vez durante el segundo o tercer trimestre del embarazo. Esto ocurre debido a que las hormonas bloqueadoras producidas por la placenta generan una resistencia natural a la insulina en la madre, la cual no logra ser compensada por el páncreas materno. Provoca un aumento significativo en el riesgo de sufrir complicaciones obstétricas como macrosomía fetal (bebés con peso excesivo al nacer), parto por cesárea, preeclampsia grave e hipoglucemia neonatal inmediata. Los niveles de azúcar en sangre suelen normalizarse por completo tras el nacimiento del bebé y la expulsión de la placenta, pero este antecedente incrementa drásticamente la probabilidad de que tanto la madre como el hijo desarrollen diabetes tipo 2 crónica en los años venideros.
-        </ion-card-content>
-      </ion-card>
+    <ion-row class="ion-padding-horizontal">
+      <ion-col size="12">
+        <ion-card color="dark" mode="ios" class="ion-no-margin ion-margin-bottom">
+          <ion-card-header>
+            <ion-card-title style="font-weight: bold;">Tipo 1</ion-card-title>
+          </ion-card-header>
+          <img src="assets/images/tipo1.jpg" alt="Diabetes Tipo 1" style="width: 100%; display: block;" />
+          <ion-card-content class="ion-text-justify">
+            Producción deficiente de insulina debido a una destrucción autoinmune mediada por linfocitos T de las células beta localizadas en los islotes de Langerhans dentro del páncreas. Requiere administración diaria de insulina exógena (por inyecciones subcutáneas múltiples o mediante sistemas avanzados de bomba de infusión continua) de por vida para regular los niveles de glucosa y evitar la cetoacidosis diabética, una complicación médica aguda que pone en riesgo la vida por el aumento de cuerpos cetónicos acídicos en la sangre. Suele diagnosticarse en niños, adolescentes y adultos jóvenes, manifestándose de manera abrupta e intensa. Actualmente no se conoce la causa ambiental exacta que desencadena este ataque del propio sistema inmunológico contra el páncreas, y no existen métodos de prevención validados científicamente, requiriendo un manejo multidisciplinario riguroso y diario por parte del paciente.
+          </ion-card-content>
+        </ion-card>
+      </ion-col>
+    </ion-row>
 
-      <ion-card color="dark" mode="ios">
-        <ion-card-header>
-          <ion-card-title>Prevención</ion-card-title>
-        </ion-card-header>
-        <img src="assets/images/prevencion.jpg" alt="Estilo de Vida Saludable" />
-        <ion-card-content>
-          Estrategias clave basadas en evidencia para ayudar a prevenir o retrasar de forma efectiva la aparición de la diabetes tipo 2. Implica mantener un índice de masa corporal (IMC) y un porcentaje de grasa saludable, realizando al menos 150 minutos de ejercicio físico de intensidad moderada a la semana (como caminar a paso ligero, nadar, correr o andar en bicicleta) combinado con entrenamientos de fuerza muscular. Se debe seguir una dieta equilibrada rica en fibra soluble e insoluble (vegetales, legumbres, granos enteros) reduciendo al mínimo absoluto el consumo de azúcares libres, harinas refinadas y alimentos ultraprocesados. Asimismo, es crucial controlar periódicamente los niveles de presión arterial, mantener un perfil lipídico óptimo y evitar por completo el consumo de tabaco, ya que la nicotina exacerba la resistencia a la insulina y destruye la microcirculación capilar.
-        </ion-card-content>
-      </ion-card>
+    <ion-row class="ion-padding-horizontal">
+      <ion-col size="12">
+        <ion-card color="dark" mode="ios" class="ion-no-margin ion-margin-bottom">
+          <ion-card-header>
+            <ion-card-title style="font-weight: bold;">Tipo 2</ion-card-title>
+          </ion-card-header>
+          <img src="assets/images/tipo2.jpg" alt="Diabetes Tipo 2" style="width: 100%; display: block;" />
+          <ion-card-content class="ion-text-justify">
+            El cuerpo desarrolla resistencia periférica a la acción de la insulina en tejidos clave como el músculo esquelético, el tejido adiposo y el hígado. De forma progresiva, los islotes pancreáticos pierden la capacidad funcional de producir esta hormona en cantidades suficientes para compensar dicha resistencia celular. Representa aproximadamente el 95% de los casos diagnosticados a nivel mundial y su avance suele ser silencioso durante muchos años. Está estrechamente relacionada con factores de riesgo modificables como el sedentarismo crónico, la obesidad de distribución abdominal, la hipertensión arterial y una dieta basada en carbohidratos ultraprocesados. Se puede prevenir, retrasar o incluso lograr la remisión clínica mediante cambios profundos y sostenidos en el estilo de vida, acompañados de un diagnóstico médico precoz y oportuno que evite secuelas a largo plazo.
+          </ion-card-content>
+        </ion-card>
+      </ion-col>
+    </ion-row>
 
-      <ion-list-header>
-        <ion-label class="separador" class="titulo" color="dark">FISIOPATOLOGÍA AVANZADA</ion-label>
-      </ion-list-header>
+    <ion-row class="ion-padding-horizontal">
+      <ion-col size="12">
+        <ion-card color="dark" mode="ios" class="ion-no-margin ion-margin-bottom">
+          <ion-card-header>
+            <ion-card-title style="font-weight: bold;">Gestacional</ion-card-title>
+          </ion-card-header>
+          <img src="assets/images/gestacional.jpg" alt="Diabetes Gestacional" style="width: 100%; display: block;" />
+          <ion-card-content class="ion-text-justify">
+            Es un tipo de intolerancia a los carbohidratos que genera hiperglucemia de severidad variable y que se detecta por primera vez durante el segundo o tercer trimestre del embarazo. Esto ocurre debido a que las hormonas bloqueadoras producidas por la placenta generan una resistencia natural a la insulina en la madre, la cual no logra ser compensada por el páncreas materno. Provoca un aumento significativo en el riesgo de sufrir complicaciones obstétricas como macrosomía fetal (bebés con peso excesivo al nacer), parto por cesárea, preeclampsia grave e hipoglucemia neonatal inmediata. Los niveles de azúcar en sangre suelen normalizarse por completo tras el nacimiento del bebé y la expulsión de la placenta, pero este antecedente incrementa drásticamente la probabilidad de que tanto la madre como el hijo desarrollen diabetes tipo 2 crónica en los años venideros.
+          </ion-card-content>
+        </ion-card>
+      </ion-col>
+    </ion-row>
 
-      <ion-card color="dark" mode="ios">
-        <ion-card-header>
-          <ion-card-title>El Rol de la Insulina y el Páncreas</ion-card-title>
-        </ion-card-header>
-        <img src="assets/images/fisiopatologia.jpg" alt="Mecanismo de la Insulina" />
-        <ion-card-content>
-          La insulina funciona como una llave química molecular indispensable para que la glucosa pueda cruzar la membrana celular a través de los transportadores GLUT4. En un organismo sano, el páncreas libera ráfagas precisas de insulina en respuesta al aumento de nutrientes tras la digestión. Cuando existe un defecto en este mecanismo, el azúcar se acumula peligrosamente en el espacio extracelular y el torrente sanguíneo, desatando toxicidad celular directa conocida como glucotoxicidad. Paralelamente, el hígado, al no recibir la señal insulínica de que ya hay suficiente azúcar en el cuerpo, continúa liberando sus propias reservas de glucógeno mediante la glucogenólisis, lo que empeora dramáticamente el estado hiperglucémico del paciente y acelera el agotamiento metabólico general.
-        </ion-card-content>
-      </ion-card>
+    <ion-row class="ion-padding-horizontal">
+      <ion-col size="12">
+        <ion-card color="dark" mode="ios" class="ion-no-margin ion-margin-bottom">
+          <ion-card-header>
+            <ion-card-title style="font-weight: bold;">Prevención</ion-card-title>
+          </ion-card-header>
+          <img src="assets/images/prevencion.jpg" alt="Estilo de Vida Saludable" style="width: 100%; display: block;" />
+          <ion-card-content class="ion-text-justify">
+            Estrategias clave basadas en evidencia para ayudar a prevenir o retrasar de forma efectiva la aparición de la diabetes tipo 2. Implica mantener un índice de masa corporal (IMC) y un porcentaje de grasa saludable, realizando al menos 150 minutos de ejercicio físico de intensidad moderada a la semana (como caminar a paso ligero, nadar, correr o andar en bicicleta) combinado con entrenamientos de fuerza muscular. Se debe seguir una dieta equilibrada rica en fibra soluble e insoluble (vegetales, legumbres, granos enteros) reduciendo al mínimo absoluto el consumo de azúcares libres, harinas refinadas y alimentos ultraprocesados. Asimismo, es crucial controlar periódicamente los niveles de presión arterial, mantener un perfil lipídico óptimo y evitar por completo el consumo de tabaco, ya que la nicotina exacerba la resistencia a la insulina y destruye la microcirculación capilar.
+          </ion-card-content>
+        </ion-card>
+      </ion-col>
+    </ion-row>
 
-      <ion-list-header>
-        <ion-label class="separador" class="titulo" color="dark">DIAGNÓSTICO Y EXÁMENES</ion-label>
-      </ion-list-header>
+    <ion-row class="ion-justify-content-center">
+      <ion-col size="12" class="ion-text-center ion-padding-top">
+        <h2 class="titulo" style="color: var(--ion-color-dark); font-weight: bold; margin-bottom: 0;">FISIOPATOLOGÍA AVANZADA</h2>
+      </ion-col>
+    </ion-row>
 
-      <ion-card color="dark" mode="ios">
-        <ion-card-header>
-          <ion-card-title>Criterios Médicos de Laboratorio</ion-card-title>
-        </ion-card-header>
-        <img size-md="auto" class="ion-align-items-center" src="assets/images/diagnostico.jpg" alt="Pruebas de Laboratorio" />
-        <ion-card-content>
-          El diagnóstico clínico oficial y estandarizado se establece mediante exámenes analíticos de sangre específicos realizados bajo estrictas condiciones controladas. Los criterios vigentes dictaminan una glucemia basal en ayunas igual o superior a 126 mg/dL confirmada en dos ocasiones distintas con un ayuno mínimo de 8 horas. También se utiliza la prueba de Hemoglobina Glicosilada (HbA1c) con un valor igual o superior al 6.5%, la cual ofrece un panorama fidedigno del promedio del azúcar en sangre de los últimos 3 meses al evaluar la glucosa adherida a los glóbulos rojos. Otras alternativas válidas incluyen la prueba de tolerancia oral a la glucosa de 2 horas, donde un valor igual o mayor a 200 mg/dL tras una carga de 75 gramos de glucosa pura confirma la patología, al igual que una medición casual en cualquier momento del día que supere los 200 mg/dL si el paciente ya presenta síntomas evidentes.
-        </ion-card-content>
-      </ion-card>
+    <ion-row class="ion-padding-horizontal">
+      <ion-col size="12">
+        <ion-card color="dark" mode="ios" class="ion-no-margin ion-margin-bottom">
+          <ion-card-header>
+            <ion-card-title style="font-weight: bold;">El Rol de la Insulina y el Páncreas</ion-card-title>
+          </ion-card-header>
+          <img src="assets/images/fisiopatologia.jpg" alt="Mecanismo de la Insulina" style="width: 100%; display: block;" />
+          <ion-card-content class="ion-text-justify">
+            La insulina funciona como una llave química molecular indispensable para que la glucosa pueda cruzar la membrana celular a través de los transportadores GLUT4. En un organismo sano, el páncreas libera ráfagas precisas de insulina en respuesta al aumento de nutrientes tras la digestión. Cuando existe un defecto en este mecanismo, el azúcar se acumula peligrosamente en el espacio extracelular y el torrente sanguíneo, desatando toxicidad celular directa conocida como glucotoxicidad. Paralelamente, el hígado, al no recibir la señal insulínica de que ya hay suficiente azúcar en el cuerpo, continúa liberando sus propias reservas de glucógeno mediante la glucogenólisis, lo que empeora dramáticamente el estado hiperglucémico del paciente y acelera el agotamiento metabólico general.
+          </ion-card-content>
+        </ion-card>
+      </ion-col>
+    </ion-row>
 
-      <ion-list-header>
-        <ion-label class="separador" class="titulo" color="dark">COMPLICACIONES CRÓNICAS</ion-label>
-      </ion-list-header>
+    <ion-row class="ion-justify-content-center">
+      <ion-col size="12" class="ion-text-center ion-padding-top">
+        <h2 class="titulo" style="color: var(--ion-color-dark); font-weight: bold; margin-bottom: 0;">DIAGNÓSTICO Y EXÁMENES</h2>
+      </ion-col>
+    </ion-row>
 
-      <ion-card color="dark" mode="ios">
-        <ion-card-header>
-          <ion-card-title>Efectos y Daños en el Organismo</ion-card-title>
-        </ion-card-header>
-        <img src="assets/images/complicaciones.jpg" alt="Daños por Glucosa" />
-        <ion-card-content>
-          La hiperglucemia sostenida y no controlada produce daños severos e irreversibles en los vasos sanguíneos microvasculares y macrovasculares, así como en las terminaciones nerviosas de todo el cuerpo. Esto desencadena retinopatía diabética debido al debilitamiento de los capilares de la retina, siendo una de las causas principales de ceguera en la edad adulta. Asimismo, causa nefropatía diabética, destruyendo las unidades de filtración del riñón y provocando insuficiencia renal terminal que requiere diálisis de por vida. La neuropatía diabética genera pérdida de sensibilidad, dolor quemante y entumecimiento en las extremidades inferiores, lo que sumado a la mala circulación periférica propicia el desarrollo del pie diabético. Esta condición clínica genera úlceras profundas propensas a infecciones bacterianas graves que, lamentablemente, constituyen la causa principal de amputaciones no traumáticas a nivel mundial.
-        </ion-card-content>
-      </ion-card>
+    <ion-row class="ion-padding-horizontal">
+      <ion-col size="12">
+        <ion-card color="dark" mode="ios" class="ion-no-margin ion-margin-bottom">
+          <ion-card-header>
+            <ion-card-title style="font-weight: bold;">Criterios Médicos de Laboratorio</ion-card-title>
+          </ion-card-header>
+          <img src="assets/images/diagnostico.jpg" alt="Pruebas de Laboratorio" style="width: 100%; display: block;" />
+          <ion-card-content class="ion-text-justify">
+            El diagnóstico clínico oficial y estandarizado se establece mediante exámenes analíticos de sangre específicos realizados bajo estrictas condiciones controladas. Los criterios vigentes dictaminan una glucemia basal en ayunas igual o superior a 126 mg/dL confirmada en dos ocasiones distintas con un ayuno mínimo de 8 horas. También se utiliza la prueba de Hemoglobina Glicosilada (HbA1c) con un value igual o superior al 6.5%, la cual ofrece un panorama fidedigno del promedio del azúcar en sangre de los últimos 3 meses al evaluar la glucosa adherida a los glóbulos rojos. Otras alternativas válidas incluyen la prueba de tolerancia oral a la glucosa de 2 horas, donde un valor igual o mayor a 200 mg/dL tras una carga de 75 gramos de glucosa pura confirma la patología, al igual que una medición casual en cualquier momento del día que supere los 200 mg/dL si el paciente ya presenta síntomas evidentes.
+          </ion-card-content>
+        </ion-card>
+      </ion-col>
+    </ion-row>
 
-      <ion-list-header>
-        <ion-label class="separador" class="titulo" color="dark">TRATAMIENTOS</ion-label>
-      </ion-list-header>
+    <ion-row class="ion-justify-content-center">
+      <ion-col size="12" class="ion-text-center ion-padding-top">
+        <h2 class="titulo" style="color: var(--ion-color-dark); font-weight: bold; margin-bottom: 0;">COMPLICACIONES CRÓNICAS</h2>
+      </ion-col>
+    </ion-row>
 
-      <ion-card color="dark" mode="ios">
-        <ion-card-header>
-          <ion-card-title>Control Médico y Medicación</ion-card-title>
-        </ion-card-header>
-        <img src="assets/images/tratamiento.jpg" alt="Tratamiento Médico" />
-        <ion-card-content>
-          El manejo terapéutico moderno e integral abarca desde fármacos orales tradicionales como la metformina, hasta terapias avanzadas que incluyen inhibidores del cotransportador sodio-glucosa tipo 2 (SGLT2) y los revolucionarios agonistas del receptor de GLP-1, los cuales protegen adicionalmente la función cardiovascular y renal. En pacientes con diabetes tipo 1 o casos avanzados de tipo 2, es obligatorio el esquema de reemplazo insulínico mediante insulinas basales de acción prolongada e insulinas prandiales rápidas antes de cada comida. Resulta fundamental el automonitoreo diario mediante el uso de glucómetros capilares o sensores de monitorización continua de glucosa, herramientas críticas que permiten al paciente tomar decisiones informadas sobre su dosificación y alimentación, previniendo episodios peligrosos de hipoglucemia o picos extremos de hiperglucemia que desestabilicen su salud de forma inmediata.
-        </ion-card-content>
-      </ion-card>
+    <ion-row class="ion-padding-horizontal">
+      <ion-col size="12">
+        <ion-card color="dark" mode="ios" class="ion-no-margin ion-margin-bottom">
+          <ion-card-header>
+            <ion-card-title style="font-weight: bold;">Efectos y Daños en el Organismo</ion-card-title>
+          </ion-card-header>
+          <img src="assets/images/complicaciones.jpg" alt="Daños por Glucosa" style="width: 100%; display: block;" />
+          <ion-card-content class="ion-text-justify">
+            La hiperglucemia sostenida y no controlada produce daños severos e irreversibles en los vasos sanguíneos microvasculares y macrovasculares, así como en las terminaciones nerviosas de todo el cuerpo. Esto desencadena retinopatía diabética debido al debilitamiento de los capilares de la retina, siendo una de las causas principales de ceguera en la edad adulta. Asimismo, causa nefropatía diabética, destruyendo las unidades de filtración del riñón y provocando insuficiencia renal terminal que requiere diálisis de por vida. La neuropatía diabética genera pérdida de sensibilidad, dolor quemante y entumecimiento en las extremidades inferiores, lo que sumado a la mala circulación periférica propicia el desarrollo del pie diabético. Esta condición clínica genera úlceras profundas propensas a infecciones bacterianas graves que, lamentablemente, constituyen la causa principal de amputaciones no traumáticas a nivel mundial.
+          </ion-card-content>
+        </ion-card>
+      </ion-col>
+    </ion-row>
 
-      <ion-list-header>
-        <ion-label class="separador" class="titulo" color="dark">TECNOLOGÍA APLICADA</ion-label>
-      </ion-list-header>
+    <ion-row class="ion-justify-content-center">
+      <ion-col size="12" class="ion-text-center ion-padding-top">
+        <h2 class="titulo" style="color: var(--ion-color-dark); font-weight: bold; margin-bottom: 0;">TRATAMIENTOS</h2>
+      </ion-col>
+    </ion-row>
 
-      <ion-card color="dark" mode="ios">
-        <ion-card-header>
-          <ion-card-title>Sensores y Sistemas de Lazo Cerrado</ion-card-title>
-        </ion-card-header>
-        <img src="assets/images/tecnologia.jpg" alt="Dispositivos Médicos Modernos" />
-        <ion-card-content>
-          La gestión de la diabetes ha experimentado una revolución tecnológica sin precedentes gracias al desarrollo de los sensores de control continuo de glucosa (MCG), pequeños dispositivos subcutáneos que miden los niveles de azúcar en el líquido intersticial las 24 horas del día y envían alertas en tiempo real al teléfono móvil del usuario. Estos sensores se integran hoy en día con las bombas de insulina inteligentes en sistemas denominados de lazo cerrado o páncreas artificial. Estos sistemas utilizan algoritmos matemáticos avanzados para ajustar u omitir automáticamente las dosis de insulina infundidas basándose en las lecturas predictivas del sensor, reduciendo drásticamente la carga mental del paciente y optimizando el tiempo en rango glucémico seguro para evitar complicaciones a corto y largo plazo.
-        </ion-card-content>
-      </ion-card>
+    <ion-row class="ion-padding-horizontal">
+      <ion-col size="12">
+        <ion-card color="dark" mode="ios" class="ion-no-margin ion-margin-bottom">
+          <ion-card-header>
+            <ion-card-title style="font-weight: bold;">Control Médico y Medicación</ion-card-title>
+          </ion-card-header>
+          <img src="assets/images/tratamiento.jpg" alt="Tratamiento Médico" style="width: 100%; display: block;" />
+          <ion-card-content class="ion-text-justify">
+            El manejo therapeutic moderno e integral abarca desde fármacos orales tradicionales como la metformina, hasta terapias avanzadas que incluyen inhibidores del cotransportador sodio-glucosa tipo 2 (SGLT2) y los revolucionarios agonistas del receptor de GLP-1, los cuales protegen adicionalmente la función cardiovascular y renal. En pacientes con diabetes tipo 1 o casos avanzados de tipo 2, es obligatorio el esquema de reemplazo insulínico mediante insulinas basales de acción prolongada e insulinas prandiales rápidas antes de cada comida. Resulta fundamental el automonitoreo diario mediante el uso de glucómetros capilares o sensores de monitorización continua de glucosa, herramientas críticas que permiten al paciente tomar decisiones informadas sobre su dosificación y alimentación, previniendo episodios peligrosos de hipoglucemia o picos extremos de hiperglucemia que desestabilicen su salud de forma inmediata.
+          </ion-card-content>
+        </ion-card>
+      </ion-col>
+    </ion-row>
 
-      <ion-list-header>
-        <ion-label class="separador" class="titulo" color="dark">IMPACTO PSICOLÓGICO</ion-label>
-      </ion-list-header>
+    <ion-row class="ion-justify-content-center">
+      <ion-col size="12" class="ion-text-center ion-padding-top">
+        <h2 class="titulo" style="color: var(--ion-color-dark); font-weight: bold; margin-bottom: 0;">TECNOLOGÍA APLICADA</h2>
+      </ion-col>
+    </ion-row>
 
-      <ion-card color="dark" mode="ios">
-        <ion-card-header>
-          <ion-card-title>Salud Mental y Distress por Diabetes</ion-card-title>
-        </ion-card-header>
-        <img src="assets/images/psicologia.jpg" alt="Apoyo Emocional" />
-        <ion-card-content>
-          El diagnóstico y el manejo cotidiano de la diabetes conllevan una carga psicológica profunda que frecuentemente es subestimada en las consultas médicas de rutina. El término "distress por diabetes" describe el estado de agotamiento emocional, ansiedad latente y frustración que experimentan los pacientes ante las demandas implacables del autocuidado, tales como contar carbohidratos, inyectarse múltiples veces al día y lidiar con el miedo constante a las hipoglucemias nocturnas. Los estudios clínicos demuestran que las personas con diabetes tienen hasta tres veces más probabilidades de desarrollar depresión clínica en comparación con la población general. El soporte psicológico especializado y la educación diabetológica continua son pilares indispensables para fomentar la resiliencia, mejorar la adherencia al tratamiento médico y garantizar una calidad de vida óptima y duradera.
-        </ion-card-content>
-      </ion-card>
+    <ion-row class="ion-padding-horizontal">
+      <ion-col size="12">
+        <ion-card color="dark" mode="ios" class="ion-no-margin ion-margin-bottom">
+          <ion-card-header>
+            <ion-card-title style="font-weight: bold;">Sensores y Sistemas de Lazo Cerrado</ion-card-title>
+          </ion-card-header>
+          <img src="assets/images/tecnologia.jpg" alt="Dispositivos Médicos Modernos" style="width: 100%; display: block;" />
+          <ion-card-content class="ion-text-justify">
+            La gestión de la diabetes ha experimentado una revolución tecnológica sin precedentes gracias al desarrollo de los sensores de control continuo de glucosa (MCG), pequeños dispositivos subcutáneos que miden los niveles de azúcar en el líquido intersticial las 24 horas del día y envían alertas en tiempo real al teléfono móvil del usuario. Estos sensores se integran hoy en día con las bombas de insulina inteligentes en sistemas denominados de lazo cerrado o páncreas artificial. Estos sistemas utilizan algoritmos matemáticos avanzados para ajustar u omitir automáticamente las dosis de insulina infundidas basándose en las lecturas predictivas del sensor, reduciendo drásticamente la carga mental del paciente y optimizando el tiempo en rango glucémico seguro para evitar complicaciones a corto y largo plazo.
+          </ion-card-content>
+        </ion-card>
+      </ion-col>
+    </ion-row>
 
-    </ion-grid>
-  </ion-content> 
+    <ion-row class="ion-justify-content-center">
+      <ion-col size="12" class="ion-text-center ion-padding-top">
+        <h2 class="titulo" style="color: var(--ion-color-dark); font-weight: bold; margin-bottom: 0;">IMPACTO PSICOLÓGICO</h2>
+      </ion-col>
+    </ion-row>
+
+    <ion-row class="ion-padding-horizontal">
+      <ion-col size="12">
+        <ion-card color="dark" mode="ios" class="ion-no-margin ion-margin-bottom">
+          <ion-card-header>
+            <ion-card-title style="font-weight: bold;">Salud Mental y Distress por Diabetes</ion-card-title>
+          </ion-card-header>
+          <img src="assets/images/psicologia.jpg" alt="Apoyo Emocional" style="width: 100%; display: block;" />
+          <ion-card-content class="ion-text-justify">
+            El diagnóstico y el manejo cotidiano de la diabetes conllevan una carga psicológica profunda que frecuentemente es subestimada en las consultas médicas de rutina. El término "distress por diabetes" describe el estado de agotamiento emocional, ansiedad latente y frustración que experimentan los pacientes ante las demandas implacables del autocuidado, tales como contar carbohidratos, inyectarse múltiples veces al día y lidiar con el miedo constante a las hipoglucemias nocturnas. Los estudios clínicos demuestran que las personas con diabetes tienen hasta tres veces más probabilidades de desarrollar depresión clínica en comparación con la población general. El soporte psicológico especializado y la educación diabetológica continua son pilares indispensables para fomentar la resiliencia, mejorar la adherencia al tratamiento médico y garantizar una calidad de vida óptima y duradera.
+          </ion-card-content>
+        </ion-card>
+      </ion-col>
+    </ion-row>
+
+  </ion-grid>
+</ion-content>
